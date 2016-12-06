@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title>WellsFargo ESQA</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/materialize.min.css') }}">
+
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" media="screen,projection"/>
+</head>
+<style>
+    body {
+     display: flex;
+     min-height: 100vh;
+     flex-direction: column;
+ }
+ main {
+     flex: 1 0 auto;
+ }
+</style>
+<body>
+<header>
+    <div class="navbar-fixed">
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+
+	  <a href="{{ url_for('index') }}" ><img src="{{ url_for('static', filename='images/wf-logo.png') }}" style="height:64px; width:64px;"></a>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+		<li><a href="{{ url_for('ideas') }}">!deas</a></li>
+		<li><a href="#">Collaborate</a></li>
+		<li><a href="#">Tools</a></li>
+		<li><a href="#">Poll</a></li>
+        <li style="background-color: #bbdefb;"><a href="{{ url_for('myIdeas') }}">Me</a></li>
+		<li><a href="{{ url_for('logout') }}">Logout</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+		<li><a href="{{ url_for('ideas') }}">!deas</a></li>
+		<li><a href="#">Collaborate</a></li>
+		<li><a href="#">Tools</a></li>
+		<li><a href="#">Poll</a></li>
+		<li><a href="{{ url_for('logout') }}">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+        </div>
+</header>
+  <main>
+      <!--   Grid Container section   -->
+      <div class="row">
+            {% block content %}
+
+            {% endblock %}
+      </div>
+</main>
+
+  <footer class="page-footer teal">
+    <div class="container">
+      <div class="row">
+
+        <div class="col l3 s12">
+          <ul>
+            <li><a class="white-text" href="{{ url_for('ideas') }}">!deas</a></li>
+            <li><a class="white-text" href="#!">Collaborate</a></li>
+            <li><a class="white-text" href="#!">Poll</a></li>
+            <li><a class="white-text" href="#!">Tools</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <ul>
+            <li><a class="white-text" href="#!">Suggestions</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made for <a class="brown-text text-lighten-3" href="#">Enterprise QA</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="{{ url_for('static', filename='scripts/materialize.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='scripts/init.js') }}"></script>
+
+  </body>
+</html>
