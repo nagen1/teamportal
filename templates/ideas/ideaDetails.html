@@ -13,7 +13,6 @@
             <div class="card-content white-text">
 
                 {%  if detail: %}
-
               <h5>{{ detail.title }}</h5>
 			  <div>
 			  	<h5 class="card-title">Summary</h5>
@@ -31,7 +30,7 @@
 						{{ detail.tags }}
 					</div>
 			  </div>
-				{% endif %}
+
 
 			  </div>
             <div class="card-action">
@@ -42,14 +41,39 @@
 				<span class="new badge blue">100</span>
             </div>
           </div>
+			{% endif %}
+
 			<div class="fixed-action-btn" style="top: 60px; right: 24px;">
 				<a class="btn-floating btn-large waves-effect waves-light red modal-trigger" href="{{ url_for('deleteIdea', idea_id=detail.id) }}"><i class="material-icons">delete</i></a>
 				<a class="btn-floating btn-large waves-effect waves-light red modal-trigger" href="{{ url_for('editIdea', idea_id=detail.id) }}"><i class="material-icons">border_color</i></a>
 			</div>
 		  </div>
 
-        </div>
+		  <div class="input-field col s12">
+                    <form action="/ideas/comments" method="POST">
+                        <i class="material-icons prefix">comment</i>
+                        <input type="text" name="comment" type="submit" id="autocomplete-input" class="autocomplete">
+						<input type="hidden" value="{{ detail.id }}" name="idea_id">
+                        <label for="autocomplete-input">Post Comment</label>
+                    </form>
+		  </div>
 
+        <div class="col s12 m12 l12">
+          <ul class="collection">
+		  {%  if comments: %}
+		  {% for comment in comments %}
+
+                <li class="collection-item">
+                  <div class="chip">
+                    {{comment.user.email}}
+                </div>
+                  {{comment.comment}}
+                </li>
+
+		  {% endfor %}
+		  {% endif %}
+        </ul>
+            </div>
       </div>
 </div>
 

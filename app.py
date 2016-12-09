@@ -2,14 +2,13 @@ from flask import Flask, render_template, request, session, url_for, flash, redi
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.orm.exc import NoResultFound
-from database import Base, User, Ideas
+from database import Base, User, Ideas, Comments
 from functools import wraps
 from flask_login import LoginManager
 
-
 app = Flask(__name__)
 
-engine = create_engine('sqlite:///teamportal.db')
+engine = create_engine('sqlite:///teamportal_dev.db')
 Base.metadata.bind = engine
 
 DBSession = sessionmaker(bind=engine)
@@ -124,7 +123,8 @@ def ideas():
 def ideaDetails(idea_id):
     try:
         details = dbsession.query(Ideas).filter(Ideas.id == idea_id).one()
-        return render_template('ideas/ideaDetails.html', detail=details)
+        comment = dbsession.query(Comments).filter(Comments.idea_id == idea_id).all()
+        return render_template('ideas/ideaDetails.html', detail=details, comments=comment)
     except NoResultFound:
         flash('No ideas found with this Title/ID!')
         return redirect(url_for('ideas'), code=302)
@@ -179,7 +179,6 @@ def editIdea(idea_id):
 
 @app.route('/search', methods=['POST'])
 def search():
-    temp = ''
     if request.method == 'POST':
         if request.form['search']:
             term = request.form['search']
@@ -202,6 +201,24 @@ def myIdeas():
         error = "You haven't posted any Ideas yet! try doing it now"
         return render_template('/ideas/myIdeas.html', error=error)
 
+
+@app.route('/ideas/comments', methods=['POST'])
+def comments():
+    if request.method == 'POST':
+        if request.form['comment']:
+            comment = Comments()
+            comment.comment = request.form['comment']
+            comment.idea_id = request.form['idea_id']
+            email = session["user_id"]
+            user = dbsession.query(User).filter(User.email == email).one()
+            comment.createdBy = user.id
+            dbsession.add(comment)
+            dbsession.commit()
+
+            flash("Comment posted Successfully!", "comment")
+            return redirect(url_for('ideaDetails', idea_id=comment.idea_id))
+    else:
+        return None
 
 if __name__ == '__main__':
     app.secret_key = 'super_secret_key_230742'

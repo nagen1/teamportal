@@ -34,7 +34,9 @@
 		<li><a href="#">Collaborate</a></li>
 		<li><a href="#">Tools</a></li>
 		<li><a href="#">Poll</a></li>
-        <li style="background-color: #bbdefb;"><a href="{{ url_for('myIdeas') }}">Me</a></li>
+        <li style="background-color: #bbdefb;">
+          <a class="dropdown-button" href="#!" data-activates="dropdown1">Me</a>
+        </li>
 		<li><a href="{{ url_for('logout') }}">Logout</a></li>
       </ul>
 
@@ -47,6 +49,11 @@
       </ul>
     </div>
   </nav>
+      <ul id="dropdown1" class="dropdown-content" style="min-width:150px; top: 60px;">
+        <li><a href="{{ url_for('myIdeas') }}">My Ideas</a></li>
+        <li><a href="#!">Watchlist</a></li>
+        <li><a href="#!">My Comments</a></li>
+      </ul>
         </div>
 </header>
   <main>
