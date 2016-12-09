@@ -1,13 +1,17 @@
 from flask import Flask, render_template, request, session, url_for, flash, redirect
+from werkzeug.utils import secure_filename
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.orm.exc import NoResultFound
 from database import Base, User, Ideas, Comments
 from functools import wraps
 from flask_login import LoginManager
+import os
 
 app = Flask(__name__)
 
+UPLOAD_FOLDER = '/static/uploads'
+ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
 engine = create_engine('sqlite:///teamportal_dev.db')
 Base.metadata.bind = engine
 
@@ -34,6 +38,8 @@ def login_required(f):
 def load_user(user_id):
     return user_id
 
+def allowed_file(filename):
+    return '.' in filename and filename.rsplit('.', 1)[1] in ALLOWED_EXTENSIONS
 
 @app.route('/')
 @login_required
@@ -105,6 +111,12 @@ def newIdea():
         idea.user_id = user.id
         dbsession.add(idea)
         dbsession.commit()
+
+        file = request.files['file']
+        if file.filename != '':
+            if file and allowed_file(file.filename):
+                filename = secure_filename(file.filename)
+                file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 
         flash('Idea Posted Successfully!')
         return redirect(url_for('ideas'), code=302)
@@ -220,7 +232,9 @@ def comments():
     else:
         return None
 
+#------------------------- App Launch -----------------------------------
 if __name__ == '__main__':
     app.secret_key = 'super_secret_key_230742'
+    app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
     app.debug = True
     app.run(host='0.0.0.0', port=5000)

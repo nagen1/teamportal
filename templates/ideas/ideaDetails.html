@@ -58,22 +58,21 @@
                     </form>
 		  </div>
 
-        <div class="col s12 m12 l12">
-          <ul class="collection">
 		  {%  if comments: %}
 		  {% for comment in comments %}
-
-                <li class="collection-item">
+		  <div class="col s12 m12 l12">
+          	<ul class="collection">
+		      <li class="collection-item">
                   <div class="chip">
                     {{comment.user.email}}
-                </div>
+          	      </div>
                   {{comment.comment}}
-                </li>
-
+              </li>
 		  {% endfor %}
 		  {% endif %}
-        </ul>
-            </div>
+        	</ul>
+		  </div>
+
       </div>
 </div>
 

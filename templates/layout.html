@@ -8,7 +8,6 @@
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/materialize.min.css') }}">
-
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" media="screen,projection"/>
 </head>
 <style>
@@ -27,7 +26,7 @@
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
 
-	  <a href="{{ url_for('index') }}" ><img src="{{ url_for('static', filename='images/wf-logo.png') }}" style="height:64px; width:64px;"></a>
+	  <a href="{{ url_for('index') }}" ><img src="{{ url_for('static', filename='images/wf-logo.png') }}" style="height:45px; width:45px;"></a>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
 		<li><a href="{{ url_for('ideas') }}">!deas</a></li>
