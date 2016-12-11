@@ -10,7 +10,7 @@ import os
 
 app = Flask(__name__)
 
-UPLOAD_FOLDER = '/static/uploads'
+UPLOAD_FOLDER = './static/uploads'
 ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
 engine = create_engine('sqlite:///teamportal_dev.db')
 Base.metadata.bind = engine
@@ -116,7 +116,8 @@ def newIdea():
         if file.filename != '':
             if file and allowed_file(file.filename):
                 filename = secure_filename(file.filename)
-                file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+                filepath = app.config['UPLOAD_FOLDER'] + os.sep + filename
+                file.save(os.path.abspath(filepath))
 
         flash('Idea Posted Successfully!')
         return redirect(url_for('ideas'), code=302)
