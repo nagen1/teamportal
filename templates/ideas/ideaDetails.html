@@ -59,19 +59,21 @@
 		  </div>
 
 		  {%  if comments: %}
-		  {% for comment in comments %}
+
 		  <div class="col s12 m12 l12">
           	<ul class="collection">
-		      <li class="collection-item">
-                  <div class="chip">
-                    {{comment.user.email}}
-          	      </div>
-                  {{comment.comment}}
-              </li>
-		  {% endfor %}
-		  {% endif %}
+				{% for comment in comments %}
+		      		<li class="collection-item">
+                  		<div class="chip">
+                    		{{comment.user.email}}
+          	      		</div>
+                  		{{comment.comment}}
+              		</li>
+		  		{% endfor %}
         	</ul>
 		  </div>
+
+		  {% endif %}
 
       </div>
 </div>

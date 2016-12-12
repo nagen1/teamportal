@@ -21,6 +21,7 @@ class Role(db.Model):
 
     id = Column(Integer, primary_key=True)
     name = Column(String(10), nullable=False)
+    isActive = Column(Boolean, default=True)
 
 class User(db.Model):
     __tablename__ = 'users'
@@ -29,6 +30,7 @@ class User(db.Model):
     name = Column(String(100), nullable=False)
     email = Column(String(100), nullable=False)
     password = Column(String(20), nullable=False)
+    isActive = Column(Boolean, default=True)
     role_id = Column(Integer, ForeignKey(Role.id))
     role = relationship(Role)
 
@@ -49,6 +51,7 @@ class Ideas(db.Model):
     summary = Column(String(2000), nullable=False)
     tags = Column(String(30), nullable=True)
     user_id = Column(Integer, ForeignKey(User.id))
+    filePath = Column(String(100), nullable=True)
     isActive = Column(Boolean, default=True)
     createdDate = Column(DateTime(timezone=True), server_default=func.now())
     updatedDate = Column(DateTime(timezone=True), onupdate=func.now())
@@ -69,15 +72,25 @@ class Comments(db.Model):
     id = Column(Integer, primary_key=True)
     idea_id = Column(Integer, ForeignKey(Ideas.id))
     comment = Column(String(200), nullable=False)
-    #isActive = Column(Boolean, default=True)
+    isActive = Column(Boolean, default=True)
     createdBy = Column(Integer, ForeignKey(User.id))
     createdDate = Column(DateTime(timezone=True), server_default=func.now())
     updatedDate = Column(DateTime(timezone=True), onupdate=func.now())
-    users = relationship(User)
-    ideas = relationship(Ideas)
+    user = relationship("User", foreign_keys=[createdBy])
+    idea = relationship("Ideas", foreign_keys=[idea_id])
 
 engine = create_engine('sqlite:///teamportal.db')
 db.metadata.create_all(engine)
 
 if __name__ == '__main__':
     manager.run()
+
+'''to activate virtual environment and run migration using Flask-Migrate
+activate vitural env
+--- $ source venv/teamportal/bin/activate teamportal
+
+Run migration
+--- $ python database-migration_setup.py db migrate
+
+run upgrade database to apply migration scripts
+--- $ python database-migration_setup.py db upgrade'''

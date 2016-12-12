@@ -39,6 +39,7 @@ class Ideas(Base):
     title = Column(String(150), nullable=False)
     summary = Column(String(2000), nullable=False)
     tags = Column(String(30), nullable=True)
+    filePath = Column(String(100), nullable=True)
     user_id = Column(Integer, ForeignKey(User.id))
     isActive = Column(Boolean, default=True)
     createdDate = Column(DateTime(timezone=True), server_default=func.now())
