@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, session, url_for, flash, redirect, send_file
+from flask import Flask, render_template, request, session, url_for, flash, redirect, send_file, abort
 from werkzeug.utils import secure_filename
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -6,13 +6,15 @@ from sqlalchemy.orm.exc import NoResultFound
 from database import Base, User, Ideas, Comments
 from functools import wraps
 from flask_login import LoginManager
+
 import os
 
 app = Flask(__name__)
 
 UPLOAD_FOLDER = './static/uploads'
-ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
-engine = create_engine('sqlite:///teamportal.db')
+ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'docx', 'pptx', 'xlsx', 'png', 'jpg', 'jpeg', 'gif', 'doc', 'xls'])
+PER_PAGE = 20
+engine = create_engine('sqlite:///teamportal_dev2.db')
 Base.metadata.bind = engine
 
 DBSession = sessionmaker(bind=engine)
@@ -22,7 +24,7 @@ login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = 'login'
 
-#------------------------- LOGIN Functionality-----------------------------------
+
 def login_required(f):
     @wraps(f)
     def wrap(*args, **kwargs):
@@ -50,21 +52,32 @@ def index():
     else:
         return "username doesn't exists"
 
+def url_for_other_page(page):
+    args = request.view_args.copy()
+    args['page'] = page
+    return url_for(request.endpoint, **args)
+
+#------------------------- LOGIN Functionality-----------------------------------
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
         if 'hotmail' in request.form['email']:
-            newUser = User()
-            newUser.name = request.form['name']
-            newUser.email = request.form['email']
-            newUser.password = request.form['password']
-            newUser.role_id = '2'
-            dbsession.add(newUser)
-            dbsession.commit()
-            flash("User Registration Successful!")
-            return redirect(url_for('login'), code=302)
-
+            lookup = request.form['email']
+            user = dbsession.query(User).filter(User.email == lookup).all()
+            if not user:
+                newUser = User()
+                newUser.name = request.form['name']
+                newUser.email = request.form['email']
+                newUser.password = request.form['password']
+                newUser.role_id = '2'
+                dbsession.add(newUser)
+                dbsession.commit()
+                flash("User Registration Successful!")
+                return redirect(url_for('login'), code=302)
+            else:
+                error = "User email already Exists! Please try with different email"
+                return render_template('auth/register.html', error=error)
         else:
             flash("Invalid email Address!")
             return render_template('auth/register.html')
@@ -258,5 +271,6 @@ def download(idea_id):
 if __name__ == '__main__':
     app.secret_key = 'super_secret_key_230742'
     app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+    app.jinja_env.globals['url_for_other_page'] = url_for_other_page
     app.debug = True
     app.run(host='0.0.0.0', port=5000)
