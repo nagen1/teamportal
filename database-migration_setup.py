@@ -93,4 +93,6 @@ Run migration
 --- $ python database-migration_setup.py db migrate
 
 run upgrade database to apply migration scripts
---- $ python database-migration_setup.py db upgrade'''
+--- $ python database-migration_setup.py db upgrade
+
+test commit '''
