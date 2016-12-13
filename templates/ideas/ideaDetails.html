@@ -37,9 +37,11 @@
 							<img src="http://materializecss.com/images/yuna.jpg" alt="Contact Person">
 							{{ detail.user.email }}
 						</div>
+						{% if detail.filePath: %}
 							<a class="btn-floating waves-effect waves-light green modal-trigger"target="_blank" href="{{ url_for('download', idea_id=detail.id) }}">
                                 <i class="material-icons">attach_file</i>
                             </a>
+						{% endif %}
 						<span class="new badge blue">100</span>
             		</div>
 		  		</div>

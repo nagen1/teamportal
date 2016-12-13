@@ -51,8 +51,10 @@ class Ideas(db.Model):
     summary = Column(String(2000), nullable=False)
     tags = Column(String(30), nullable=True)
     user_id = Column(Integer, ForeignKey(User.id))
+    filename = Column(String(50), nullable=True)
     filePath = Column(String(100), nullable=True)
     isActive = Column(Boolean, default=True)
+    usability = Column(Boolean, default=False)
     createdDate = Column(DateTime(timezone=True), server_default=func.now())
     updatedDate = Column(DateTime(timezone=True), onupdate=func.now())
     user = relationship(User)
@@ -93,6 +95,4 @@ Run migration
 --- $ python database-migration_setup.py db migrate
 
 run upgrade database to apply migration scripts
---- $ python database-migration_setup.py db upgrade
-
-test commit '''
+--- $ python database-migration_setup.py db upgrade'''
