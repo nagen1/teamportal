@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, session, url_for, flash, redirect
+from flask import Flask, render_template, request, session, url_for, flash, redirect, send_file
 from werkzeug.utils import secure_filename
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -12,7 +12,7 @@ app = Flask(__name__)
 
 UPLOAD_FOLDER = './static/uploads'
 ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
-engine = create_engine('sqlite:///teamportal_dev.db')
+engine = create_engine('sqlite:///teamportal.db')
 Base.metadata.bind = engine
 
 DBSession = sessionmaker(bind=engine)
@@ -54,16 +54,20 @@ def index():
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
-        newUser = User()
-        newUser.name = request.form['name']
-        newUser.email = request.form['email']
-        newUser.password = request.form['password']
-        newUser.role_id = '2'
-        dbsession.add(newUser)
-        dbsession.commit()
-        flash("User Registration Successful!")
-        return redirect(url_for('login'), code=302)
+        if 'hotmail' in request.form['email']:
+            newUser = User()
+            newUser.name = request.form['name']
+            newUser.email = request.form['email']
+            newUser.password = request.form['password']
+            newUser.role_id = '2'
+            dbsession.add(newUser)
+            dbsession.commit()
+            flash("User Registration Successful!")
+            return redirect(url_for('login'), code=302)
 
+        else:
+            flash("Invalid email Address!")
+            return render_template('auth/register.html')
     else:
         return render_template('auth/register.html')
 
@@ -113,11 +117,15 @@ def newIdea():
         dbsession.commit()
 
         file = request.files['file']
+        id = str(idea.id)
         if file.filename != '':
             if file and allowed_file(file.filename):
-                filename = secure_filename(file.filename)
+                filename = id + secure_filename(file.filename)
                 filepath = app.config['UPLOAD_FOLDER'] + os.sep + filename
                 file.save(os.path.abspath(filepath))
+                idea.filePath = filepath
+                dbsession.add(idea)
+                dbsession.commit()
 
         flash('Idea Posted Successfully!')
         return redirect(url_for('ideas'), code=302)
@@ -232,6 +240,19 @@ def comments():
             return redirect(url_for('ideaDetails', idea_id=comment.idea_id))
     else:
         return None
+
+
+@app.route('/ideas/download/<int:idea_id>', methods=['GET'])
+def download(idea_id):
+    try:
+        idea = dbsession.query(Ideas).filter(Ideas.id == idea_id).one()
+        split = idea.filePath.split('\\')
+        filename = split[1:2]
+
+        return send_file(idea.filePath, attachment_filename=filename)
+    except Exception as e:
+        return str(e)
+
 
 #------------------------- App Launch -----------------------------------
 if __name__ == '__main__':
