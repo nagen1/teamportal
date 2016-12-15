@@ -1,11 +1,12 @@
 from sqlalchemy.orm import sessionmaker
+from sqlalchemy import and_
 from sqlalchemy import create_engine, func
-from database import User, Role, Ideas, Comments
+from database import User, Role, Ideas, Comments, Likes
 from sqlalchemy.ext.declarative import declarative_base
 
 
 Base = declarative_base()
-engine = create_engine('sqlite:///teamportal_dev.db')
+engine = create_engine('sqlite:///teamportal.db')
 Base.metadata.bind = engine
 
 DBSession = sessionmaker(bind=engine)
@@ -65,13 +66,15 @@ for idea in ideas:
 
 #dbsession.commit()
 email = "tester1@email.com"
-users = dbsession.query(User).filter(User.email == email).first()'''
+users = dbsession.query(User).filter(User.email == email).first()
 search = dbsession.query(Ideas).filter(Ideas.user_id == '1').all()
 
 comment = dbsession.query(Comments).filter(Comments.idea_id == '1').all()
 
 for each in comment:
     print(each.user.email)
-    print(each.idea.id)
+    print(each.idea.id)'''
 
+count = dbsession.query(Likes).filter(and_(Likes.idea_id == 1, Likes.like == True)).count()
 
+print(count)

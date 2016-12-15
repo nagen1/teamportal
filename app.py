@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, session, url_for, flash, redirect, send_file, jsonify
 from werkzeug.utils import secure_filename
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, and_
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.orm.exc import NoResultFound
 from database import Base, User, Ideas, Comments, Likes
@@ -11,7 +11,7 @@ import os
 app = Flask(__name__)
 
 UPLOAD_FOLDER = './static/uploads'
-ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
+ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif', 'ppt', 'zip', 'pptx', 'doc', 'docx'])
 engine = create_engine('sqlite:///teamportal.db')
 Base.metadata.bind = engine
 
@@ -74,7 +74,6 @@ def register():
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    error = None
 
     if request.method == 'POST':
         loginId = request.form['username']
@@ -145,7 +144,10 @@ def ideaDetails(idea_id):
     try:
         details = dbsession.query(Ideas).filter(Ideas.id == idea_id).one()
         comment = dbsession.query(Comments).filter(Comments.idea_id == idea_id).all()
-        return render_template('ideas/ideaDetails.html', detail=details, comments=comment)
+        like = dbsession.query(Likes).filter(and_(Likes.idea_id == idea_id, Likes.like == True)).count()
+        dislike = dbsession.query(Likes).filter(and_(Likes.idea_id == idea_id, Likes.like == False)).count()
+        return render_template('ideas/ideaDetails.html', detail=details, comments=comment, likes=like, dislikes=dislike)
+
     except NoResultFound:
         flash('No ideas found with this Title/ID!')
         return redirect(url_for('ideas'), code=302)
@@ -257,14 +259,24 @@ def download(idea_id):
 @app.route('/ideas/likes')
 def likes():
     likes = Likes()
-    idea_id = request.args.get('idea_id')
-    likes.like = request.args.get('likez')
+    idea_id = int(request.args.get('idea_id'))
+    temp = request.args.get('likez')
+    if temp == 'like':
+        likes.like = True
+    else:
+        likes.like = False
+
     likes.idea_id = idea_id
-    likes.user_id = session['user_id']
+    loggedUser = session['user_id']
+    user = dbsession.query(User).filter(User.email == loggedUser).one()
+    likes.user_id = user.id
     dbsession.add(likes)
     dbsession.commit()
 
-    count = dbsession.query(Likes).filter(likes.idea_id == idea_id and likes.like == 1).count()
+    if likes.like is True:
+        count = dbsession.query(Likes).filter(and_(Likes.idea_id == idea_id, Likes.like == True)).count()
+    else:
+        count = dbsession.query(Likes).filter(and_(Likes.idea_id == idea_id, Likes.like == False)).count()
 
     return jsonify(result=count)
 
