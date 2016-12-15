@@ -1,9 +1,9 @@
-from flask import Flask, render_template, request, session, url_for, flash, redirect, send_file
+from flask import Flask, render_template, request, session, url_for, flash, redirect, send_file, jsonify
 from werkzeug.utils import secure_filename
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.orm.exc import NoResultFound
-from database import Base, User, Ideas, Comments
+from database import Base, User, Ideas, Comments, Likes
 from functools import wraps
 from flask_login import LoginManager
 import os
@@ -253,6 +253,20 @@ def download(idea_id):
     except Exception as e:
         return str(e)
 
+
+@app.route('/ideas/likes')
+def likes():
+    likes = Likes()
+    idea_id = request.args.get('idea_id')
+    likes.like = request.args.get('likez')
+    likes.idea_id = idea_id
+    likes.user_id = session['user_id']
+    dbsession.add(likes)
+    dbsession.commit()
+
+    count = dbsession.query(Likes).filter(likes.idea_id == idea_id and likes.like == 1).count()
+
+    return jsonify(result=count)
 
 #------------------------- App Launch -----------------------------------
 if __name__ == '__main__':

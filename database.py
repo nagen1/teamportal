@@ -70,5 +70,16 @@ class Comments(Base):
     user = relationship("User", foreign_keys=[createdBy])
     idea = relationship("Ideas", foreign_keys=[idea_id])
 
-engine = create_engine('sqlite:///teamportal_dev.db')
+class Likes(Base):
+    __tablename__ = 'likes'
+
+    id = Column(Integer, primary_key=True)
+    idea_id = Column(Integer, ForeignKey(Ideas.id))
+    user_id = Column(Integer, ForeignKey(User.id))
+    like = Column(Boolean)
+    user = relationship("User", foreign_keys=[user_id])
+    idea = relationship("Ideas", foreign_keys=[idea_id])
+
+
+engine = create_engine('sqlite:///teamportal.db')
 Base.metadata.create_all(engine)
