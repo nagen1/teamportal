@@ -267,7 +267,7 @@ def likes():
         likes.like = False
 
     likes.idea_id = idea_id
-    loggedUser = session['user_id']
+    loggedUser = session['user_id'] #Need to add an other condition to validate same user is not vote/like one idea many times
     user = dbsession.query(User).filter(User.email == loggedUser).one()
     likes.user_id = user.id
     dbsession.add(likes)
@@ -279,6 +279,19 @@ def likes():
         count = dbsession.query(Likes).filter(and_(Likes.idea_id == idea_id, Likes.like == False)).count()
 
     return jsonify(result=count)
+
+
+@app.route('/tools')
+def tools():
+
+    try:
+        tools = dbsession.query(Ideas).filter(Ideas.usability == True).all()
+
+    except NoResultFound:
+        flash("NO results found!")
+        None
+
+    return render_template('tools/index.html', ideas=tools)
 
 #------------------------- App Launch ------------------------------------
 if __name__ == '__main__':

@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+  <div class="container">
+    <div class="section">
+      <div class="row">
+          <div class="col s12">
+                <div class="input-field col s12">
+                    <form action="/search" method="POST">
+                        <i class="material-icons prefix">search</i>
+                        <input type="text" name="search" type="submit" id="autocomplete-input" class="autocomplete">
+                        <label for="autocomplete-input">Search</label>
+                    </form>
+                </div>
+          </div>
+        {%  for idea in ideas %}
+
+            <div class="col s12 m6 l3">
+                <div class="card grey lighten-5 hoverable">
+                    <div class="card-content dark">
+                        <span class="card-title">{{ idea.title  | truncate(18, true)}}</span>
+                        <p>{{ idea.summary | truncate(150, true) }}</p>
+                    </div>
+                    <div class="card-action orange">
+                        <a href="{{ url_for('ideaDetails', idea_id=idea.id)}}" style="color: #020202;">Details</a>
+                    </div>
+                </div>
+            </div>
+
+          {% endfor %}
+
+        </div>
+    </div>
+  </div>
+
+    <div class="fixed-action-btn" style="top: 60px; right: 24px;">
+        <a class="btn-floating btn-large red" href="{{ url_for('newIdea') }}">
+            <i class="material-icons">add</i>
+        </a>
+    </div>
+
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+            {% if message == "Idea Posted Successfully!" %}
+                <div id="myDiv" class="fixed-action-btn" style="top: 130px; right: 24px;">{{ message }}</div>
+            {% endif %}
+            {% if message == "You are not Authorized to Deleted this Idea!" %}
+                <div id="myDiv" class="fixed-action-btn" style="top: 130px; right: 24px;">{{ message }}</div>
+                <!--div id="myDiv" style="top: 150px; right: 24px;" class="fixed-action-btn card lighten-5 z-depth-1">
+                    <div class="card-content white-text">
+                        <span class="black-text">{{ message }}</span>
+                    </div>
+                </div-->
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+    {% endwith %}
+
+{% endblock %}

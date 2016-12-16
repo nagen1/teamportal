@@ -73,8 +73,11 @@ comment = dbsession.query(Comments).filter(Comments.idea_id == '1').all()
 
 for each in comment:
     print(each.user.email)
-    print(each.idea.id)'''
+    print(each.idea.id)
 
-count = dbsession.query(Likes).filter(and_(Likes.idea_id == 1, Likes.like == True)).count()
+count = dbsession.query(Likes).filter(and_(Likes.idea_id == 1, Likes.like == True)).count()'''
+tools = dbsession.query(Ideas).filter(Ideas.usability == True).all()
 
-print(count)
+for each in tools:
+    print(each.title)
+
