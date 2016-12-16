@@ -1,0 +1,35 @@
+[ ] User Registration / Email Verification / Edit / Deactivate / Delete user
+[ ] Idea Creation
+[ ] Edit Idea
+[ ] Delete Idea
+[ ] Vote Idea 
+[ ] Score Idea 
+[ ] Comment Idea / Edit / Delete (Restrictions based on the user rights)
+[ ] Tag Idea / Edit / Delete (Restrictions based on the access rights)
+[ ] Change Stage of idea
+[ ] Report abuse idea / comment
+[ ] Edit / Delete report abuse
+[ ] Searching already existing ideas
+[ ] Official Response
+[ ] Filter using criteria with community, Keyword, Category etc
+[ ] import / Export Ideas 
+[ ] Suspend User
+[ ] Resent Ideas, Most Popular, Most Discussed, Highest Score
+[ ] Login Pop up,Company Logo, Forgot Password and create user account
+[ ] Mark as featured idea
+[ ] Voting History
+[ ] My Dashboard, FAQ, (Browse-> Ideas, (Peoples -> Filter), Tags,) Quick Tour, and Community Search
+[ ] Terms of use, Admin, Help and Submit Feed Back
+[ ] Check Pagination of Ideas.
+[ ] Community Dash Board-> Community Trends,Community Activity, Ideas Status and Page View Traffic graphs
+[ ] Move Idea
+[ ] Copy Idea
+[ ] Create Announcement for a community, Edit and Delete
+[ ] Create Role, Change role for different users, and Check user permissions
+[ ] Mass Update - Community, Category, Stage, and Idea
+[ ] Upload Users
+[ ] Invite users
+[ ] Export all tabs Results to CSV and XML
+[ ] Email Notifications
+[ ] Logout link and Company Logo
+[ ] Check Pagination of Ideas, Users, comments, tags, etc,..
