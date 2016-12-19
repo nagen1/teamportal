@@ -43,3 +43,15 @@ $(function() {
       return false;
     });
   });
+
+$(function() {
+    $('a#watchIt').bind('click', function() {
+      $.getJSON($SCRIPT_ROOT + '/ideas/watchlist', {
+        watchIt: "watchit",
+        idea_id: $('input[name="idea_id"]').val()
+      }, function(data) {
+        $("#watchIt").text(data.watch);
+      });
+      return false;
+    });
+  });
