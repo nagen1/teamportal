@@ -76,9 +76,9 @@ Community
 - [ ] Community Activity
 
 Poll/Annoucement/Survey
-[ ] Create Announcement for a community
-[ ] Edit 
-[ ] Delete
+- [ ] Create Announcement for a community
+- [ ] Edit 
+- [ ] Delete
 
 [ ] Terms of use, Admin, Help and Submit Feed Back
 
