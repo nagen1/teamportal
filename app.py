@@ -1,9 +1,9 @@
 from flask import Flask, render_template, request, session, url_for, flash, redirect, send_file, jsonify
 from werkzeug.utils import secure_filename
-from sqlalchemy import create_engine, and_
+from sqlalchemy import create_engine, and_, distinct
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy.orm.exc import NoResultFound
-from database import Base, User, Ideas, Comments, Likes
+from sqlalchemy.orm.exc import NoResultFound, MultipleResultsFound
+from database import Base, User, Ideas, Comments, Likes, WatchList
 from functools import wraps
 from flask_login import LoginManager
 import os
@@ -223,6 +223,49 @@ def myIdeas():
     except NoResultFound:
         error = "You haven't posted any Ideas yet! try doing it now"
         return render_template('/ideas/myIdeas.html', error=error)
+
+@app.route('/ideas/me/watchlist')
+def myWatch():
+    me = session['user_id']
+    try:
+        users = dbsession.query(User).filter(User.email == me).first()
+        mywatchlist = dbsession.query(WatchList).filter(WatchList.user_id == users.id).all()
+        return render_template('/ideas/myWatch.html', watchlist=mywatchlist)
+
+    except NoResultFound:
+        error = "You haven't posted any Ideas yet! try doing it now"
+        return render_template('/ideas/myIdeas.html', error=error)
+
+@app.route('/ideas/me/comments')
+def myComments():
+    me = session['user_id']
+    try:
+        users = dbsession.query(User).filter(User.email == me).first()
+        mycomments = dbsession.query(Comments).filter(Comments.createdBy == users.id).all()
+
+        return render_template('/ideas/myComments.html', comments=mycomments)
+
+    except NoResultFound:
+        error = "You haven't commented on any Ideas yet! try doing it now"
+        return render_template('/ideas/myIdeas.html', error=error)
+
+@app.route('/ideas/watchlist')
+def watchlist():
+    watchlist = WatchList()
+    idea_id = int(request.args.get('idea_id'))
+    temp = request.args.get('watchIt')
+    loggedUser = session['user_id']  # Need to add an other condition to validate same user is not vote/like one idea many times
+    user = dbsession.query(User).filter(User.email == loggedUser).one()
+    try:
+        checkpoint = dbsession.query(WatchList).filter(and_(WatchList.idea_id == idea_id, WatchList.user_id == user.id)).one()
+    except NoResultFound or MultipleResultsFound:
+        if temp == 'watchit':
+            watchlist.watchIt = True
+            watchlist.idea_id = idea_id
+            watchlist.user_id = user.id
+            dbsession.add(watchlist)
+            dbsession.commit()
+            return jsonify(watch='Added to your Watch List')
 
 
 @app.route('/ideas/comments', methods=['POST'])
