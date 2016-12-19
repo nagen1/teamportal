@@ -80,6 +80,16 @@ class Likes(Base):
     user = relationship("User", foreign_keys=[user_id])
     idea = relationship("Ideas", foreign_keys=[idea_id])
 
+class WatchList(Base):
+    __tablename__ = 'watchlist'
+
+    id = Column(Integer, primary_key=True)
+    idea_id = Column(Integer, ForeignKey(Ideas.id))
+    user_id = Column(Integer, ForeignKey(User.id))
+    watchIt = Column(Boolean)
+    user = relationship("User", foreign_keys=[user_id])
+    idea = relationship("Ideas", foreign_keys=[idea_id])
+
 
 engine = create_engine('sqlite:///teamportal.db')
 Base.metadata.create_all(engine)
