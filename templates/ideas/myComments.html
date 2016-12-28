@@ -18,7 +18,7 @@
                                 <p>{{ each.idea.summary | truncate(150, true) }}</p>
                             </div>
                             <div class="card-action">
-                                <a href="{{ url_for('ideaDetails', idea_id=each.idea.id)}}">Details</a>
+                                <a href="{{ url_for('ideaDetails', idea_id=each.idea_id)}}">Details</a>
                             </div>
                         </div>
                     </div>

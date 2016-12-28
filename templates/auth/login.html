@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/materialize.min.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/materialize.css') }}">
   <style>
     body {
       display: flex;
@@ -57,14 +57,14 @@
             <div class='row'>
               <div class='input-field col s12'>
                 <input class='validate' type='email' name='username' id='email' style="color: white;"/>
-                <label for='email'>Enter your email</label>
+                <label class="left-align" for='email'>Enter your email</label>
               </div>
             </div>
 
             <div class='row'>
               <div class='input-field col s12'>
                 <input class='validate' type='password' name='password' id='password' style="color: white;"/>
-                <label for='password'>Enter your password</label>
+                <label class="left-align" for='password'>Enter your password</label>
               </div>
               <label style='float: right;'>
 								<a class='pink-text' href='#!'><b>Forgot Password?</b></a>

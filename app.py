@@ -120,6 +120,7 @@ def newIdea():
         if file.filename != '':
             if file and allowed_file(file.filename):
                 filename = id + secure_filename(file.filename)
+                idea.filename = filename
                 filepath = app.config['UPLOAD_FOLDER'] + os.sep + filename
                 file.save(os.path.abspath(filepath))
                 idea.filePath = filepath
@@ -291,8 +292,8 @@ def comments():
 def download(idea_id):
     try:
         idea = dbsession.query(Ideas).filter(Ideas.id == idea_id).one()
-        split = idea.filePath.split('\\')
-        filename = split[1:2]
+        #split = idea.filePath.split('\\')
+        filename = idea.filename
 
         return send_file(idea.filePath, attachment_filename=filename)
     except Exception as e:
@@ -342,3 +343,4 @@ if __name__ == '__main__':
     app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
     app.debug = True
     app.run(host='0.0.0.0', port=5000)
+    #app.run(host=os.getenv('IP', '0.0.0.0'),port=int(os.getenv('PORT', 8080)))   #for cloud9
