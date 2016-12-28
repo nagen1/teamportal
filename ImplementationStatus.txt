@@ -14,7 +14,7 @@ User Registration / Login
 Idea
 - [x] Idea Creation
 - [x] Edit Idea
-- [ ] Attach details to Idea
+- [x] Attach details to Idea
 - [x] Delete Idea
 - [x] Searching already existing ideas
 - [ ] Filter using criteria with community, Keyword, Category etc
@@ -33,7 +33,7 @@ Comment Idea
 
 Tags
 - [x] Edit 
-- [ ] Delete (Restrictions based on the user rights)
+- [X] Delete (Restrictions based on the user rights)
 - [x] Tag Idea 
 - [x] Edit 
 - [ ] Edit / Delete report abuse
@@ -66,8 +66,8 @@ Featured Idea
 
 My Dashboard, FAQ, (Browse-> Ideas, (Peoples -> Filter), Tags,) Quick Tour, and Community Search
 - [x] My Ideas
-- [ ] Watchlist
-- [ ] My Comments
+- [x] Watchlist
+- [x] My Comments
 - [ ] Check Pagination
 
 Community
