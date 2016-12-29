@@ -43,6 +43,13 @@ Voting
 - [x] Voting History
 - [ ] Score Idea 
 
+Collabaration 
+- [ ] Create a Thread
+- [ ] Edit Thread
+- [ ] Delete Thread
+- [ ] Activity
+- [ ] Marked as Anwsered a Thread
+
 Super/Admin User
 - [ ] Admin Dashboard
 - [ ] Official Response to Ideas
