@@ -213,6 +213,7 @@ def search():
                 error = 'No Results found!'
                 return render_template('ideas/search.html', error=error)
 
+
 @app.route('/ideas/me')
 def myIdeas():
     me = session['user_id']
@@ -224,6 +225,7 @@ def myIdeas():
     except NoResultFound:
         error = "You haven't posted any Ideas yet! try doing it now"
         return render_template('/ideas/myIdeas.html', error=error)
+
 
 @app.route('/ideas/me/watchlist')
 def myWatch():
@@ -237,6 +239,7 @@ def myWatch():
         error = "You haven't posted any Ideas yet! try doing it now"
         return render_template('/ideas/myIdeas.html', error=error)
 
+
 @app.route('/ideas/me/comments')
 def myComments():
     me = session['user_id']
@@ -249,6 +252,7 @@ def myComments():
     except NoResultFound:
         error = "You haven't commented on any Ideas yet! try doing it now"
         return render_template('/ideas/myIdeas.html', error=error)
+
 
 @app.route('/ideas/watchlist')
 def watchlist():
@@ -267,6 +271,8 @@ def watchlist():
             dbsession.add(watchlist)
             dbsession.commit()
             return jsonify(watch='Added to your Watch List')
+    if checkpoint:
+        return jsonify(watch='Already added to your Watch List')
 
 
 @app.route('/ideas/comments', methods=['POST'])
