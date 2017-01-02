@@ -343,6 +343,11 @@ def tools():
 
     return render_template('tools/index.html', ideas=tools)
 
+
+#------------------------- Poll/Survey/Announcements Functionality ------------------------------------
+
+
+
 #------------------------- App Launch ------------------------------------
 if __name__ == '__main__':
     app.secret_key = 'super_secret_key_230742'

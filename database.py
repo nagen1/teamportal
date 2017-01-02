@@ -90,6 +90,54 @@ class WatchList(Base):
     user = relationship("User", foreign_keys=[user_id])
     idea = relationship("Ideas", foreign_keys=[idea_id])
 
+class Campaigns(Base):
+    __tablename__ = 'campaign'
+
+    id = Column(Integer, primary_key=True)
+    name = Column(String, nullable=False)
+    isActive = Column(Boolean, default=True)
+    createdBy = Column(Integer, ForeignKey(User.id))
+    createdDate = Column(DateTime(timezone=True), server_default=func.now())
+    updatedDate = Column(DateTime(timezone=True), onupdate=func.now())
+    user = relationship("User", foreign_keys=[createdBy])
+
+class Questions(Base):
+    __tablename__ = 'question'
+
+    id = Column(Integer, primary_key=True)
+    name = Column(String, nullable=False)
+    isActive = Column(Boolean, default=True)
+    createdBy = Column(Integer, ForeignKey(User.id))
+    createdDate = Column(DateTime(timezone=True), server_default=func.now())
+    updatedDate = Column(DateTime(timezone=True), onupdate=func.now())
+    user = relationship("User", foreign_keys=[createdBy])
+
+class Choices(Base):
+    __tablename__ = 'choice'
+
+    id = Column(Integer, primary_key=True)
+    name = Column(String, nullable=False)
+    isActive = Column(Boolean, default=True)
+    createdBy = Column(Integer, ForeignKey(User.id))
+    createdDate = Column(DateTime(timezone=True), server_default=func.now())
+    updatedDate = Column(DateTime(timezone=True), onupdate=func.now())
+    user = relationship("User", foreign_keys=[createdBy])
+
+class CapmaignResults(Base):
+    __tablename__ = 'campaignResults'
+
+    id = Column(Integer, primary_key=True)
+    campaing_id = Column(Integer, ForeignKey(Campaigns.id))
+    question_id = Column(Integer, ForeignKey(Questions.id))
+    choice_id = Column(Integer, ForeignKey(Choices.id))
+    createdBy = Column(Integer, ForeignKey(User.id))
+    createdDate = Column(DateTime(timezone=True), server_default=func.now())
+    updatedDate = Column(DateTime(timezone=True), onupdate=func.now())
+    user = relationship("User", foreign_keys=[createdBy])
+    campaign = relationship("Campaigns", foreign_keys=[campaing_id])
+    question = relationship("Questions", foreign_keys=[question_id])
+    choice = relationship("Choices", foreign_keys=[choice_id])
+
 
 engine = create_engine('sqlite:///teamportal.db')
 Base.metadata.create_all(engine)
