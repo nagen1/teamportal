@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+  <div class="container">
+    <div class="section">
+
+      <!--   Data Entry Section   -->
+      <div class="row ">
+        <form method="POST">
+        <div class="col s12 m12 l12">
+          <div class="card grey darken-3">
+
+            <div class="card-content white-text">
+                <div class="row">
+                  <h5 class="col s9 card-title">New Campaign</h5>
+                  <div class="input-field col s3">
+                      <input id="newCampaign" type="text" name="title" class="validate">
+                      <label class="white-text" for="newCampaign">Campaign Name</label>
+                  </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="icon_prefix" type="text" name="title" class="validate">
+                        <label for="icon_prefix">Idea Title</label>
+                    </div>
+                    <div class="col s3">
+                      <input type="checkbox" id="test5" />
+                      <label for="test5">Red</label>
+                    </div>
+                    <div class="col s3">
+                      <input type="checkbox" id="test6" />
+                      <label for="test6">Red</label>
+                    </div>
+                    <div class="col s3">
+                      <input type="checkbox" id="test7" />
+                      <label for="test7">Red</label>
+                    </div>
+                    <div class="col s3">
+                      <input type="checkbox" id="test8" />
+                      <label for="test8">Red</label>
+                    </div>
+                </div>
+
+                <div class="row">
+				    <div class="input-field col s12">
+                        <input id="icon_prefix1" type="text" name="summary" class="validate">
+                        <label for="icon_prefix1">Idea Summary</label>
+                    </div>
+                </div>
+                    <div class="row">
+					    <div class="input-field col s12">
+                            <input id="icon_prefix2" type="text" name="tags" class="validate">
+                            <label for="icon_prefix2">Idea Tags</label>
+					    </div>
+                    </div>
+
+
+                    <center>
+                        <div class="container" >
+				            <button class="btn waves-effect waves-light" type="submit" name="action">Submit</button>
+                        </div>
+                    </center>
+
+
+			  </div>
+          </div>
+        </div>
+        </form>
+      </div>
+      <!--   Data Entry Section   -->
+
+    </div>
+  </div>
+
+{% endblock %}
+
+
+

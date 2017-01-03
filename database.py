@@ -131,13 +131,14 @@ class CapmaignResults(Base):
     question_id = Column(Integer, ForeignKey(Questions.id))
     choice_id = Column(Integer, ForeignKey(Choices.id))
     createdBy = Column(Integer, ForeignKey(User.id))
+    isActive = Column(Boolean, default=True)
     createdDate = Column(DateTime(timezone=True), server_default=func.now())
     updatedDate = Column(DateTime(timezone=True), onupdate=func.now())
-    user = relationship("User", foreign_keys=[createdBy])
     campaign = relationship("Campaigns", foreign_keys=[campaing_id])
     question = relationship("Questions", foreign_keys=[question_id])
     choice = relationship("Choices", foreign_keys=[choice_id])
+    user = relationship("User", foreign_keys=[createdBy])
 
 
-engine = create_engine('sqlite:///teamportal.db')
+engine = create_engine('sqlite:///teamportal_dev.db')
 Base.metadata.create_all(engine)

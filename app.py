@@ -3,7 +3,8 @@ from werkzeug.utils import secure_filename
 from sqlalchemy import create_engine, and_, distinct
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.orm.exc import NoResultFound, MultipleResultsFound
-from database import Base, User, Ideas, Comments, Likes, WatchList
+from database import Base, User, Ideas, Comments, Likes, WatchList, \
+    Campaigns, Choices, Questions, CapmaignResults
 from functools import wraps
 from flask_login import LoginManager
 import os
@@ -12,7 +13,7 @@ app = Flask(__name__)
 
 UPLOAD_FOLDER = './static/uploads'
 ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif', 'ppt', 'zip', 'pptx', 'doc', 'docx'])
-engine = create_engine('sqlite:///teamportal.db')
+engine = create_engine('sqlite:///teamportal_dev.db')
 Base.metadata.bind = engine
 
 DBSession = sessionmaker(bind=engine)
@@ -346,6 +347,26 @@ def tools():
 
 #------------------------- Poll/Survey/Announcements Functionality ------------------------------------
 
+@app.route('/campaigns/new')
+def newCampaign():
+
+
+    return render_template('/campaigns/newCampaign.html')
+
+
+@app.route('/campaigns')
+def campaigns():
+    try:
+        campaign = dbsession.query(Campaigns).order_by(Campaigns.name).all()
+    except NoResultFound:
+        flash("No Campaigns Created Yet!")
+
+    return render_template('/campaigns/index.html', campaigns=campaign)
+
+@app.route('/campaigns/<int:campaign_id>')
+def campaignDetails(campaign_id):
+
+    return render_template('/campaigns/campaign.html')
 
 
 #------------------------- App Launch ------------------------------------

@@ -1,0 +1,70 @@
+
+{% extends "layout.html" %}
+
+{% block content %}
+
+  <div class="container">
+    <div class="section">
+
+      <!--   Data Entry Section   -->
+      <div class="row ">
+        <form method="POST">
+        <div class="col s12 m12 l12">
+          <div class="card grey darken-3">
+
+            <div class="card-content white-text">
+                <div class="row">
+                  <h5 class="col s9 card-title">New Campaign</h5>
+                  <div class="input-field col s3">
+                      <input id="newCampaign" type="text" name="title" class="validate">
+                      <label class="white-text" for="newCampaign">Campaign Name</label>
+                  </div>
+                </div>
+
+                {% set i = 1 %}
+                {% for n in range(0,5) %}
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="{{'question'+i|string}}" type="text" name="title" class="validate">
+                        <label for="{{'question'+i|string}}">Question {{ i }}</label>
+                    </div>
+                    <div class="input-field col s3">
+                        <input id="choice1" type="text" name="title" class="validate">
+                        <label for="choice1">Choice A</label>
+                    </div>
+                    <div class="input-field col s3">
+                        <input id="choice2" type="text" name="title" class="validate">
+                        <label for="choice2">Choice B</label>
+                    </div>
+                    <div class="input-field col s3">
+                        <input id="choice3" type="text" name="title" class="validate">
+                        <label for="choice3">Choice C</label>
+                    </div>
+                    <div class="input-field col s3">
+                        <input id="choice4" type="text" name="title" class="validate">
+                        <label for="choice4">Choice D</label>
+                    </div>
+                </div>
+
+                {% set i = i + 1 %}
+                {% endfor %}
+
+                    <center>
+                        <div class="container" >
+				            <button class="btn waves-effect waves-light" type="submit" name="action">Submit</button>
+                        </div>
+                    </center>
+
+
+			  </div>
+          </div>
+        </div>
+        </form>
+      </div>
+      <!--   Data Entry Section   -->
+
+    </div>
+  </div>
+
+{% endblock %}
