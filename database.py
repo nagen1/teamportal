@@ -123,18 +123,34 @@ class Choices(Base):
     updatedDate = Column(DateTime(timezone=True), onupdate=func.now())
     user = relationship("User", foreign_keys=[createdBy])
 
-class CapmaignResults(Base):
-    __tablename__ = 'campaignResults'
+class CampaignCreate(Base):
+    __tablename__ = 'campaignCreate'
 
     id = Column(Integer, primary_key=True)
-    campaing_id = Column(Integer, ForeignKey(Campaigns.id))
+    campaign_id = Column(Integer, ForeignKey(Campaigns.id))
     question_id = Column(Integer, ForeignKey(Questions.id))
     choice_id = Column(Integer, ForeignKey(Choices.id))
     createdBy = Column(Integer, ForeignKey(User.id))
     isActive = Column(Boolean, default=True)
     createdDate = Column(DateTime(timezone=True), server_default=func.now())
     updatedDate = Column(DateTime(timezone=True), onupdate=func.now())
-    campaign = relationship("Campaigns", foreign_keys=[campaing_id])
+    campaign = relationship("Campaigns", foreign_keys=[campaign_id])
+    question = relationship("Questions", foreign_keys=[question_id])
+    choice = relationship("Choices", foreign_keys=[choice_id])
+    user = relationship("User", foreign_keys=[createdBy])
+
+class CampaignResults(Base):
+    __tablename__ = 'campaignResults'
+
+    id = Column(Integer, primary_key=True)
+    campaign_id = Column(Integer, ForeignKey(Campaigns.id))
+    question_id = Column(Integer, ForeignKey(Questions.id))
+    choice_id = Column(Integer, ForeignKey(Choices.id))
+    createdBy = Column(Integer, ForeignKey(User.id))
+    isActive = Column(Boolean, default=True)
+    createdDate = Column(DateTime(timezone=True), server_default=func.now())
+    updatedDate = Column(DateTime(timezone=True), onupdate=func.now())
+    campaign = relationship("Campaigns", foreign_keys=[campaign_id])
     question = relationship("Questions", foreign_keys=[question_id])
     choice = relationship("Choices", foreign_keys=[choice_id])
     user = relationship("User", foreign_keys=[createdBy])
