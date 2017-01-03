@@ -4,7 +4,7 @@ from sqlalchemy import create_engine, and_, distinct
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.orm.exc import NoResultFound, MultipleResultsFound
 from database import Base, User, Ideas, Comments, Likes, WatchList, \
-    Campaigns, Choices, Questions, CapmaignResults
+    Campaigns, Choices, Questions, CampaignCreate, CampaignResults
 from functools import wraps
 from flask_login import LoginManager
 import os
@@ -347,11 +347,57 @@ def tools():
 
 #------------------------- Poll/Survey/Announcements Functionality ------------------------------------
 
-@app.route('/campaigns/new')
+@app.route('/campaigns/new', methods=['GET', 'POST'])
 def newCampaign():
 
+    if request.method == 'POST':
+        campaign = Campaigns()
+        question = Questions()
+        choice = Choices()
 
-    return render_template('/campaigns/newCampaign.html')
+        if 'newCampaign' in request.form:
+            campaign.name = request.form['newCampaign']
+            try:
+                campaign = dbsession.query(Campaigns).filter(Campaigns.name == campaign.name).one()
+            except NoResultFound:
+                None
+                dbsession.add(campaign)
+                dbsession.commit()
+
+            x = 1
+            while x <= 5:
+                temp = 'question' + str(x)
+                if temp in request.form:
+                    questionName = request.form[temp]
+                    if questionName is not '':
+                        question.name = questionName
+                        dbsession.add(question)
+                        dbsession.commit()
+                y = 1
+                while y <= 4:
+                    chTemp = temp + 'choice' + str(y)
+                    if chTemp in request.form:
+                        choiceName = request.form[chTemp]
+                        if choiceName is not '':
+                            try:
+                                choice = dbsession.query(Choices).filter(Choices.name == choiceName).one()
+                            except NoResultFound:
+                                choice.name = request.form[chTemp]
+                                dbsession.add(choice)
+                                dbsession.commit()
+
+                            campaignCreate = CampaignCreate()
+                            campaignCreate.campaign_id = campaign.id
+                            campaignCreate.question_id = question.id
+                            campaignCreate.choice_id = choice.id
+                            dbsession.add(campaignCreate)
+                            dbsession.commit()
+                    y += 1
+                x += 1
+
+        redirect('campaigns')
+    else:
+        return render_template('/campaigns/newCampaign.html')
 
 
 @app.route('/campaigns')
@@ -362,6 +408,7 @@ def campaigns():
         flash("No Campaigns Created Yet!")
 
     return render_template('/campaigns/index.html', campaigns=campaign)
+
 
 @app.route('/campaigns/<int:campaign_id>')
 def campaignDetails(campaign_id):
