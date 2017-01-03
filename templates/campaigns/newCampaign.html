@@ -16,7 +16,7 @@
                 <div class="row">
                   <h5 class="col s9 card-title">New Campaign</h5>
                   <div class="input-field col s3">
-                      <input id="newCampaign" type="text" name="title" class="validate">
+                      <input id="newCampaign" type="text" name="newCampaign" class="validate">
                       <label class="white-text" for="newCampaign">Campaign Name</label>
                   </div>
                 </div>
@@ -26,25 +26,31 @@
 
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="{{'question'+i|string}}" type="text" name="title" class="validate">
+                        <input id="{{'question'+i|string}}" type="text" name="{{'question'+i|string}}" class="validate">
                         <label for="{{'question'+i|string}}">Question {{ i }}</label>
                     </div>
+
+                    {% set y = 1 %}
+                    {% for n in range(0,4) %}
                     <div class="input-field col s3">
-                        <input id="choice1" type="text" name="title" class="validate">
-                        <label for="choice1">Choice A</label>
+                        <input id="{{'question'+i|string+'choice'+y|string}}" type="text" name="{{'question'+i|string+'choice'+y|string}}" class="validate">
+                        <label for="{{'question'+i|string+'choice'+y|string}}">Choice {{ y }}</label>
+                    </div>
+                    {% set y = y + 1 %}
+                    {% endfor %}
+
+                    <!--div class="input-field col s3">
+                        <input id="{{'question'+i|string+'choiceB'}}" type="text" name="{{'question'+i|string+'choiceB'}}" class="validate">
+                        <label for="{{'question'+i|string+'choiceB'}}">Choice B</label>
                     </div>
                     <div class="input-field col s3">
-                        <input id="choice2" type="text" name="title" class="validate">
-                        <label for="choice2">Choice B</label>
+                        <input id="{{'question'+i|string+'choiceC'}}" type="text" name="{{'question'+i|string+'choiceC'}}" class="validate">
+                        <label for="{{'question'+i|string+'choiceC'}}">Choice C</label>
                     </div>
                     <div class="input-field col s3">
-                        <input id="choice3" type="text" name="title" class="validate">
-                        <label for="choice3">Choice C</label>
-                    </div>
-                    <div class="input-field col s3">
-                        <input id="choice4" type="text" name="title" class="validate">
-                        <label for="choice4">Choice D</label>
-                    </div>
+                        <input id="{{'question'+i|string+'choiceD'}}" type="text" name="{{'question'+i|string+'choiceD'}}" class="validate">
+                        <label for="{{'question'+i|string+'choiceD'}}">Choice D</label>
+                    </div-->
                 </div>
 
                 {% set i = i + 1 %}
