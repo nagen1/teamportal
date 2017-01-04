@@ -13,7 +13,7 @@ app = Flask(__name__)
 
 UPLOAD_FOLDER = './static/uploads'
 ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif', 'ppt', 'zip', 'pptx', 'doc', 'docx'])
-engine = create_engine('sqlite:///teamportal_dev.db')
+engine = create_engine('sqlite:///teamportal_dev2.db')
 Base.metadata.bind = engine
 
 DBSession = sessionmaker(bind=engine)
@@ -352,8 +352,6 @@ def newCampaign():
 
     if request.method == 'POST':
         campaign = Campaigns()
-        question = Questions()
-        choice = Choices()
 
         if 'newCampaign' in request.form:
             campaign.name = request.form['newCampaign']
@@ -370,6 +368,7 @@ def newCampaign():
                 if temp in request.form:
                     questionName = request.form[temp]
                     if questionName is not '':
+                        question = Questions()
                         question.name = questionName
                         dbsession.add(question)
                         dbsession.commit()
@@ -382,6 +381,7 @@ def newCampaign():
                             try:
                                 choice = dbsession.query(Choices).filter(Choices.name == choiceName).one()
                             except NoResultFound:
+                                choice = Choices()
                                 choice.name = request.form[chTemp]
                                 dbsession.add(choice)
                                 dbsession.commit()
@@ -395,7 +395,8 @@ def newCampaign():
                     y += 1
                 x += 1
 
-        redirect('campaigns')
+        return redirect(url_for('campaigns'))
+
     else:
         return render_template('/campaigns/newCampaign.html')
 
@@ -413,7 +414,13 @@ def campaigns():
 @app.route('/campaigns/<int:campaign_id>')
 def campaignDetails(campaign_id):
 
-    return render_template('/campaigns/campaign.html')
+    try:
+        campaign = dbsession.query(Campaigns).filter(Campaigns.id == campaign_id).one()
+        form = dbsession.query(CampaignCreate).filter(CampaignCreate.campaign_id == campaign_id).all()
+    except NoResultFound:
+        flash('No Campaign Exists!')
+
+    return render_template('/campaigns/campaignDetails.html', campaign=campaign, forms=form)
 
 
 #------------------------- App Launch ------------------------------------

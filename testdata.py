@@ -1,12 +1,12 @@
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import and_
 from sqlalchemy import create_engine, func
-from database import User, Role, Ideas, Comments, Likes
+from database import User, Role, Ideas, Comments, Likes, CampaignCreate, Campaigns, Choices, Questions
 from sqlalchemy.ext.declarative import declarative_base
 
 
 Base = declarative_base()
-engine = create_engine('sqlite:///teamportal.db')
+engine = create_engine('sqlite:///teamportal_dev2.db')
 Base.metadata.bind = engine
 
 DBSession = sessionmaker(bind=engine)
@@ -76,8 +76,9 @@ for each in comment:
     print(each.idea.id)
 
 count = dbsession.query(Likes).filter(and_(Likes.idea_id == 1, Likes.like == True)).count()'''
-tools = dbsession.query(Ideas).filter(Ideas.usability == True).all()
 
-for each in tools:
-    print(each.title)
+#campaign = dbsession.query(Campaigns).filter(Campaigns.id == 2).one()
+question = dbsession.query(CampaignCreate).filter(CampaignCreate.campaign_id == 2).all()
 
+for quest in question:
+    print(quest.question_id)

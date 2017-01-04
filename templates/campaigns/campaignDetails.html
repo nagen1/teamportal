@@ -1,0 +1,58 @@
+
+{% extends "layout.html" %}
+
+{% block content %}
+
+  <div class="container">
+    <div class="section">
+
+      <!--   Data Entry Section   -->
+      <div class="row ">
+        <form method="POST">
+        <div class="col s12 m12 l12">
+          <div class="card grey darken-3">
+
+            <div class="card-content white-text">
+                <div class="row">
+                  <h5 class="col s12 card-title">{{ campaign.name }}</h5>
+                </div>
+
+                {% set i = 1 %}
+                {% for form in forms %}
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <strong>{{ form.question.name }}</strong>
+                    </div>
+
+                    {% set y = 1 %}
+                    {% for choice in form.choice %}
+                    <div class="input-field col s3">
+                        <strong for="{{'question'+i|string+'choice'+y|string}}">{{ choice.name }}</strong>
+                    </div>
+                    {% set y = y + 1 %}
+                    {% endfor %}
+
+                </div>
+
+                {% set i = i + 1 %}
+                {% endfor %}
+
+                    <center>
+                        <div class="container" >
+				            <button class="btn waves-effect waves-light" type="submit" name="action">Submit</button>
+                        </div>
+                    </center>
+
+
+			  </div>
+          </div>
+        </div>
+        </form>
+      </div>
+      <!--   Data Entry Section   -->
+
+    </div>
+  </div>
+
+{% endblock %}

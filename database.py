@@ -156,5 +156,5 @@ class CampaignResults(Base):
     user = relationship("User", foreign_keys=[createdBy])
 
 
-engine = create_engine('sqlite:///teamportal_dev.db')
+engine = create_engine('sqlite:///teamportal_dev2.db')
 Base.metadata.create_all(engine)
