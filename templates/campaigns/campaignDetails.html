@@ -18,21 +18,23 @@
                 </div>
 
                 {% set i = 1 %}
-                {% for form in forms %}
+                {% for question in questions %}
 
                 <div class="row">
                     <div class="input-field col s12">
-                        <strong>{{ form.question.name }}</strong>
+                        <strong>{{ question.question.name }}</strong>
                     </div>
 
-                    {% set y = 1 %}
-                    {% for choice in form.choice %}
+                    {% for choice in choices %}
+                    {% if question.question_id == choice.question_id %}
                     <div class="input-field col s3">
-                        <strong for="{{'question'+i|string+'choice'+y|string}}">{{ choice.name }}</strong>
+                        <p>
+                          <input type="checkbox" id="{{choice.id}}" />
+                          <label for="{{choice.id}}">{{ choice.choice.name }}</label>
+                        </p>
                     </div>
-                    {% set y = y + 1 %}
+                    {% endif %}
                     {% endfor %}
-
                 </div>
 
                 {% set i = i + 1 %}
