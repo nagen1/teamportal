@@ -416,11 +416,13 @@ def campaignDetails(campaign_id):
 
     try:
         campaign = dbsession.query(Campaigns).filter(Campaigns.id == campaign_id).one()
-        form = dbsession.query(CampaignCreate).filter(CampaignCreate.campaign_id == campaign_id).all()
+        questions = dbsession.query(CampaignCreate).group_by(CampaignCreate.question_id). \
+            filter(CampaignCreate.campaign_id == campaign_id).all()
+        choices = dbsession.query(CampaignCreate).filter(CampaignCreate.campaign_id == campaign_id).all()
     except NoResultFound:
         flash('No Campaign Exists!')
 
-    return render_template('/campaigns/campaignDetails.html', campaign=campaign, forms=form)
+    return render_template('/campaigns/campaignDetails.html', campaign=campaign, questions=questions, choices=choices)
 
 
 #------------------------- App Launch ------------------------------------
