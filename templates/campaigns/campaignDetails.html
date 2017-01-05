@@ -13,13 +13,9 @@
           <div class="card grey darken-3">
 
             <div class="card-content white-text">
-                <div class="row">
                   <h5 class="col s12 card-title">{{ campaign.name }}</h5>
-                </div>
 
-                {% set i = 1 %}
                 {% for question in questions %}
-
                 <div class="row">
                     <div class="input-field col s12">
                         <strong>{{ question.question.name }}</strong>
@@ -28,16 +24,12 @@
                     {% for choice in choices %}
                     {% if question.question_id == choice.question_id %}
                     <div class="input-field col s3">
-                        <p>
                           <input type="checkbox" id="{{choice.id}}" />
                           <label for="{{choice.id}}">{{ choice.choice.name }}</label>
-                        </p>
                     </div>
                     {% endif %}
                     {% endfor %}
                 </div>
-
-                {% set i = i + 1 %}
                 {% endfor %}
 
                     <center>
@@ -45,7 +37,6 @@
 				            <button class="btn waves-effect waves-light" type="submit" name="action">Submit</button>
                         </div>
                     </center>
-
 
 			  </div>
           </div>
