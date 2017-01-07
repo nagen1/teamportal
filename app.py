@@ -390,6 +390,9 @@ def newCampaign():
                             campaignCreate.campaign_id = campaign.id
                             campaignCreate.question_id = question.id
                             campaignCreate.choice_id = choice.id
+                            loggedUser = session['user_id']  # Need to add an other condition to validate same user is not vote/like one idea many times
+                            user = dbsession.query(User).filter(User.email == loggedUser).one()
+                            campaignCreate.createdBy = user.id
                             dbsession.add(campaignCreate)
                             dbsession.commit()
                     y += 1
@@ -423,6 +426,35 @@ def campaignDetails(campaign_id):
         flash('No Campaign Exists!')
 
     return render_template('/campaigns/campaignDetails.html', campaign=campaign, questions=questions, choices=choices)
+
+
+@app.route('/campaigns/campaignAttend', methods=['GET', 'POST'])
+def campaignAttend():
+
+    if request.method == 'POST':
+        campaignId = request.form['campaignId']
+        anwsers = dbsession.query(CampaignCreate).filter(CampaignCreate.campaign_id == campaignId).all()
+
+        for anwser in anwsers:
+            choiceId = str(anwser.id)
+            try:
+                choice = request.form[choiceId]
+                if choice == 'on':
+                    results = CampaignResults()
+                    results.campaign_id = anwser.campaign_id
+                    results.question_id = anwser.question_id
+                    results.choice_id = anwser.choice_id
+                    loggedUser = session['user_id']  # Need to add an other condition to validate same user is not vote/like one idea many times
+                    user = dbsession.query(User).filter(User.email == loggedUser).one()
+                    results.createdBy = user.id
+                    dbsession.add(results)
+                    dbsession.commit()
+
+            except:
+                choice = ''
+
+
+        return redirect(url_for('campaigns'))
 
 
 #------------------------- App Launch ------------------------------------

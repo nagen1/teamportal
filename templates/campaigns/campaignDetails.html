@@ -8,12 +8,13 @@
 
       <!--   Data Entry Section   -->
       <div class="row ">
-        <form method="POST">
+        <form action="/campaigns/campaignAttend" method="POST">
         <div class="col s12 m12 l12">
           <div class="card grey darken-3">
 
             <div class="card-content white-text">
-                  <h5 class="col s12 card-title">{{ campaign.name }}</h5>
+                <h5 class="col s12 card-title">{{ campaign.name }}</h5>
+                <input type="hidden" value="{{ campaign.id }}" name="campaignId">
 
                 {% for question in questions %}
                 <div class="row">
@@ -24,7 +25,7 @@
                     {% for choice in choices %}
                     {% if question.question_id == choice.question_id %}
                     <div class="input-field col s3">
-                          <input type="checkbox" id="{{choice.id}}" />
+                          <input type="checkbox" id="{{choice.id}}" name="{{choice.id}}"/>
                           <label for="{{choice.id}}">{{ choice.choice.name }}</label>
                     </div>
                     {% endif %}
