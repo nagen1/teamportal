@@ -55,3 +55,29 @@ p {
 footer.page-footer {
   margin: 0;
 }
+
+a.badges {
+  min-width: 3rem;
+  padding: 0 1px;
+  margin-left: 2px;
+  margin-right: 2px;
+  text-align: center;
+  font-size: 1rem;
+  line-height: inherit;
+  color: #757575;
+  float: right;
+  box-sizing: border-box;
+}
+
+
+span.badges {
+  min-width: 3rem;
+  padding: 0 6px;
+  /*margin-left: 14px;*/
+  text-align: center;
+  font-size: 1rem;
+  line-height: inherit;
+  color: #757575;
+  float: right;
+  box-sizing: border-box;
+}

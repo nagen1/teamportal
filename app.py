@@ -13,7 +13,7 @@ app = Flask(__name__)
 
 UPLOAD_FOLDER = './static/uploads'
 ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif', 'ppt', 'zip', 'pptx', 'doc', 'docx'])
-engine = create_engine('sqlite:///teamportal_dev2.db')
+engine = create_engine('sqlite:///teamportal.db')
 Base.metadata.bind = engine
 
 DBSession = sessionmaker(bind=engine)
