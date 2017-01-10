@@ -475,7 +475,9 @@ def newthread():
         thread.title = request.form['title']
         thread.description = request.form['description']
         thread.tags = request.form['tags']
-
+        loggedUser = session['user_id']
+        user = dbsession.query(User).filter(User.email == loggedUser).one()
+        thread.createdBy = user.id
         dbsession.add(thread)
         dbsession.commit()
 
@@ -483,6 +485,15 @@ def newthread():
     else:
         return render_template('/collaborate/newthread.html')
 
+
+@app.route('/collaborate/<int:thread_id>')
+def threadDetail(thread_id):
+    try:
+        thread = dbsession.query(Threads).filter(Threads.id == thread_id).one()
+    except NoResultFound:
+        None
+
+    return render_template('/collaborate/threadDetails.html', thread=thread)
 
 #------------------------- App Launch ------------------------------------
 if __name__ == '__main__':
