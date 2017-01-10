@@ -4,7 +4,7 @@ from sqlalchemy import create_engine, and_, distinct
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.orm.exc import NoResultFound, MultipleResultsFound
 from database import Base, User, Ideas, Comments, Likes, WatchList, \
-    Campaigns, Choices, Questions, CampaignCreate, CampaignResults
+    Campaigns, Choices, Questions, CampaignCreate, CampaignResults, Threads, Response
 from functools import wraps
 from flask_login import LoginManager
 import os
@@ -13,7 +13,7 @@ app = Flask(__name__)
 
 UPLOAD_FOLDER = './static/uploads'
 ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif', 'ppt', 'zip', 'pptx', 'doc', 'docx'])
-engine = create_engine('sqlite:///teamportal.db')
+engine = create_engine('sqlite:///teamportal_dev1.db')
 Base.metadata.bind = engine
 
 DBSession = sessionmaker(bind=engine)
@@ -455,6 +455,33 @@ def campaignAttend():
 
 
         return redirect(url_for('campaigns'))
+
+
+# ------------------------- Collaborate Functionality ------------------------------------
+@app.route('/collaborate')
+def collaborate():
+    try:
+        threads = dbsession.query(Threads).order_by(Threads.createdDate).all()
+    except NoResultFound:
+        None
+
+    return render_template('/collaborate/index.html', threads=threads)
+
+
+@app.route('/collaborate/new', methods=['GET', 'POST'])
+def newthread():
+    if request.method == 'POST':
+        thread = Threads()
+        thread.title = request.form['title']
+        thread.description = request.form['description']
+        thread.tags = request.form['tags']
+
+        dbsession.add(thread)
+        dbsession.commit()
+
+        return redirect(url_for('collaborate'))
+    else:
+        return render_template('/collaborate/newthread.html')
 
 
 #------------------------- App Launch ------------------------------------

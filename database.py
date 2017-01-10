@@ -155,6 +155,35 @@ class CampaignResults(Base):
     choice = relationship("Choices", foreign_keys=[choice_id])
     user = relationship("User", foreign_keys=[createdBy])
 
+class Threads(Base):
+    __tablename__ = 'threads'
 
-engine = create_engine('sqlite:///teamportal_dev2.db')
+    id = Column(Integer, primary_key=True)
+    title = Column(String(150), nullable=False)
+    description = Column(String(700), nullable=False)
+    views = Column(Integer, nullable=True)
+    tags = Column(Integer, nullable=True)
+    isActive = Column(Boolean, default=True)
+    isDuplicate = Column(Boolean, default=False)
+    createdBy = Column(Integer, ForeignKey(User.id))
+    createdDate = Column(DateTime(timezone=True), server_default=func.now())
+    updatedDate = Column(DateTime(timezone=True), onupdate=func.now())
+    user = relationship("User", foreign_keys=[createdBy])
+
+class Response(Base):
+    __tablename__ = 'response'
+
+    id = Column(Integer, primary_key=True)
+    description = Column(String(700), nullable=False)
+    answer = Column(Boolean, default=False)
+    isActive = Column(Boolean, default=True)
+    thread_id = Column(Integer, ForeignKey(Threads.id))
+    createdBy = Column(Integer, ForeignKey(User.id))
+    createdDate = Column(DateTime(timezone=True), server_default=func.now())
+    updatedDate = Column(DateTime(timezone=True), onupdate=func.now())
+    thread = relationship("Threads", foreign_keys=[thread_id])
+    user = relationship("User", foreign_keys=[createdBy])
+
+
+engine = create_engine('sqlite:///teamportal_dev1.db')
 Base.metadata.create_all(engine)
