@@ -31,7 +31,7 @@
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
 		<li><a href="{{ url_for('ideas') }}">!deas</a></li>
-		<li><a href="#">Collaborate</a></li>
+		<li><a href="{{ url_for('collaborate') }}">Collaborate</a></li>
 		<li><a href="{{ url_for('tools') }}">Featured Ideas</a></li>
 		<li><a href="{{ url_for('campaigns') }}">Campaigns</a></li>
         <li>
@@ -42,9 +42,9 @@
 
       <ul id="nav-mobile" class="side-nav">
 		<li><a href="{{ url_for('ideas') }}">!deas</a></li>
-		<li><a href="#">Collaborate</a></li>
+		<li><a href="{{ url_for('collaborate') }}">Collaborate</a></li>
 		<li><a href="{{ url_for('tools') }}">Featured Ideas</a></li>
-		<li><a href="#">Poll</a></li>
+		<li><a href="{{ url_for('campaigns') }}">Poll</a></li>
 		<li><a href="{{ url_for('logout') }}">Logout</a></li>
       </ul>
     </div>
@@ -72,7 +72,7 @@
         <div class="col l3 s12">
           <ul>
             <li><a class="white-text" href="{{ url_for('ideas') }}">!deas</a></li>
-            <li><a class="white-text" href="#!">Collaborate</a></li>
+            <li><a class="white-text" href="{{ url_for('campaigns') }}">Collaborate</a></li>
             <li><a class="white-text" href="{{ url_for('tools') }}">Featured Ideas</a></li>
           </ul>
         </div>

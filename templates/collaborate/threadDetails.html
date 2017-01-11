@@ -13,39 +13,25 @@
                 {%  if thread: %}
 				<h5>{{ thread.title }}</h5>
 				<h5 class="card-title">Description</h5>
-				<p>
-					{{ thread.description }}
-				</p>
-				<div class="chip"> {{ thread.tags }} </div>
+				<p>{{ thread.description }}</p>
 		  	</div>
 			<div class="card-action" style="padding:10px 20px 50px 20px;">
-				<div class="container col s6" style="padding:5px 0px 0px 0px;">
-					<div class="chip">
-							{{ thread.user.email }}
-					</div>
-						{% if thread.filePath: %}
-						<a class="btn-floating waves-effect waves-light green modal-trigger"target="_blank" href="{{ url_for('download', idea_id=thread.id) }}">
-                           	<i class="material-icons">attach_file</i>
-                        </a>
-                        {% endif %}
+				<div class="container col s9">
+					<div class="chip">{{ thread.tags }}</div>
 				</div>
-				<!--div class="container col s6" style="padding: 8px">
-					<span class="badges green" id="dresult">{{dislikes}}</span>
-					<a class="badges" href="#" id="dislike" style="margin-right: 1px; color: #ffffff;"><i class="material-icons prefix">thumb_down</i></a>
-					<span class="badges green" id="result">{{likes}}</span>
-					<a class="badges" href="#" id="like" style="margin-right: 1px; color: #ffffff;"><i class="material-icons prefix">thumb_up</i></a>
-                </div-->
-            </div>
+				<div class="container col s3" style="padding:5px 0px 0px 0px;">
+					<div class="chip">{{ thread.user.email }}</div>
+				</div>
 			    {% endif %}
-
-		  <div class="input-field col s12">
-              <form action="/ideas/comments" method="POST">
-                <i class="material-icons prefix">comment</i>
-                <input type="text" name="comment" type="submit" id="autocomplete-input" class="autocomplete">
-                <input type="hidden" value="{{ thread.id }}" name="idea_id">
-                <label for="autocomplete-input">Post Comment</label>
-              </form>
-		  </div>
+			</div>
+			  <div class="input-field col s12">
+				  <form action="/ideas/comments" method="POST">
+					<i class="material-icons prefix">question_answer</i>
+					<input type="text" name="comment" type="submit" id="autocomplete-input" class="autocomplete">
+					<input type="hidden" value="{{ thread.id }}" name="idea_id">
+					<label for="autocomplete-input">Answer</label>
+				  </form>
+			  </div>
 
 		  {%  if comments: %}
 		  <div class="col s12 m12 l12">
@@ -63,8 +49,8 @@
 		  {% endif %}
         </div>
       </div>
+	  </div>
       <!--   End of Page Content Section   -->
-
     </div>
 </div>
 

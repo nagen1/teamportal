@@ -161,7 +161,7 @@ class Threads(Base):
     id = Column(Integer, primary_key=True)
     title = Column(String(150), nullable=False)
     description = Column(String(700), nullable=False)
-    views = Column(Integer, nullable=True)
+    views = Column(Integer, nullable=True, default=0)
     tags = Column(Integer, nullable=True)
     isActive = Column(Boolean, default=True)
     isDuplicate = Column(Boolean, default=False)

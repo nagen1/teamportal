@@ -495,6 +495,7 @@ def threadDetail(thread_id):
 
     return render_template('/collaborate/threadDetails.html', thread=thread)
 
+
 #------------------------- App Launch ------------------------------------
 if __name__ == '__main__':
     app.secret_key = 'super_secret_key_230742'

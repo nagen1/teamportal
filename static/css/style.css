@@ -107,3 +107,9 @@ nav .brand-logo {
         line-height: 45px;
     }
 }
+
+@media only screen and (min-width: 601px){
+    .navbar-fixed {
+        height: 45px;
+    }
+}
