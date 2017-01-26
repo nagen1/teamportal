@@ -14,6 +14,10 @@
 - Create Ideas
 - Read - display all ideas that are created and saved
  1. load ideas in functionality/feature pagination
+ 2. Like and Dislike Idea
+ 3. Comment on Idea
+ 4. attach files to Idea
+ 5. Add Idea to My Bookmark/Watchlist 
 - Update/Edit Ideas
  1. User can update is own ideas (not others)
  2. Admin can edit or delete or change the idea status
