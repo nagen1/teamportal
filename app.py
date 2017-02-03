@@ -202,9 +202,9 @@ def editIdea(idea_id):
         return render_template('/ideas/editIdea.html', idea=details)
 
 
-@app.route('/search', methods=['POST'])
+@app.route('/search', methods=['GET'])
 def search():
-    if request.method == 'POST':
+    if request.method == 'GET':
         if request.form['search']:
             term = request.form['search']
             try:
