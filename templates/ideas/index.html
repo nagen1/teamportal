@@ -6,13 +6,7 @@
     <div class="section">
       <div class="row">
           <div class="col s12">
-                <div class="input-field col s12">
-                    <form action="/search" method="POST">
-                        <i class="material-icons prefix">search</i>
-                        <input type="text" name="search" type="submit" id="autocomplete-input" class="autocomplete">
-                        <label for="autocomplete-input">Search</label>
-                    </form>
-                </div>
+                <strong><h5 style="margin: 20px 0px 0px 0px;">Ideas</h5></strong>
           </div>
         {%  for idea in ideas %}
 
@@ -24,6 +18,8 @@
                     </div>
                     <div class="card-action">
                         <a href="{{ url_for('ideaDetails', idea_id=idea.id)}}">Details</a>
+                        <span class="badges white-text">{{idea.id}}</span>
+                        <span class="badges red-text"><i class="material-icons">favorite</i></span>
                     </div>
                 </div>
             </div>

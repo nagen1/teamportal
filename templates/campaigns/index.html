@@ -6,13 +6,7 @@
     <div class="section">
       <div class="row">
           <div class="col s12">
-                <div class="input-field col s12">
-                    <form action="/search" method="POST">
-                        <i class="material-icons prefix">search</i>
-                        <input type="text" name="search" type="submit" id="autocomplete-input" class="autocomplete">
-                        <label for="autocomplete-input">Search</label>
-                    </form>
-                </div>
+            <strong><h5 style="margin: 20px 0px 0px 0px;">Campaigns</h5></strong>
           </div>
         {%  for campaign in campaigns %}
 
@@ -34,11 +28,23 @@
     </div>
   </div>
 
-    <div class="fixed-action-btn" style="top: 60px; right: 24px;">
+    <!--div class="fixed-action-btn" style="top: 60px; right: 24px;">
         <a class="btn-floating btn-large red" href="{{ url_for('newCampaign') }}">
             <i class="material-icons">add</i>
         </a>
-    </div>
+    </div-->
+
+    <div class="fixed-action-btn horizontal click-to-toggle" style="top: 60px; right: 24px;">
+    <a class="btn-floating btn-large red">
+      <i class="material-icons">menu</i>
+    </a>
+    <ul>
+      <li><a class="btn-floating red" href="{{ url_for('newCampaign') }}"><i class="material-icons">people</i></a></li>
+      <li><a class="btn-floating yellow darken-1"><i class="material-icons">touch_app</i></a></li>
+      <li><a class="btn-floating green"><i class="material-icons">assessment</i></a></li>
+      <li><a class="btn-floating blue"><i class="material-icons">poll</i></a></li>
+    </ul>
+  </div>
 
     {% with messages = get_flashed_messages() %}
     {% if messages %}
