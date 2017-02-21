@@ -48,14 +48,12 @@ class Ideas(Base):
     updatedDate = Column(DateTime(timezone=True), onupdate=func.now())
     user = relationship(User)
 
-    '''@property
+    @property
     def serialize(self):
-    """Return object data in easily serializeable format"""
-    return {
-        'id': self.id,
-        'title': self.title,
-        'summary': self.summary,
-    }'''
+        return {
+            'value': self.id,
+            'label': self.title,
+        }
 
 class Comments(Base):
     __tablename__ = 'comments'
@@ -185,5 +183,5 @@ class Response(Base):
     user = relationship("User", foreign_keys=[createdBy])
 
 
-engine = create_engine('sqlite:///teamportal_dev1.db')
+engine = create_engine('sqlite:///teamportal.db')
 Base.metadata.create_all(engine)

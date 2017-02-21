@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <h1 class="header center teal-text text-lighten-2">Hello, World!</h1>
+        <div class="row center">
+          <h5 class="header col s12 light">A modern way to Ideation, Collaborate, Share and Build</h5>
+        </div>
+        <div class="row center">
+
+                <div class="input-field col s6">
+                    <form action="/search" method="POST">
+                        <i class="material-icons prefix">search</i>
+                        <input type="text" name="search" type="submit" id="autocomplete-input" class="autocomplete">
+                        <label for="autocomplete-input">Search</label>
+                    </form>
+                </div>
+        </div>
+        <br><br>
+
+      </div>
+    </div>
+    <div class="parallax"><img src="{{ url_for('static', filename='images/bg-010.jpg') }}" alt="Unsplashed background img 1"></div>
+  </div>
+
+
+  <div class="container">
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4 l3">
+		<a href="{{ url_for('ideas') }}" class="black-text">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">lightbulb_outline</i></h2>
+            <h5 class="center">!deas</h5>
+            <p class="light center-align">Share your smart Ideas, Discuss to improve and turn it into Featured Idea</p>
+          </div>
+		  </a>
+        </div>
+
+        <div class="col s12 m4 l3">
+          <a href="{{ url_for('collaborate') }}" class="black-text">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">group</i></h2>
+            <h5 class="center">Collaborate</h5>
+            <p class="light center-align">Collaborate with other team members, Help each other, Questions, Threads and Discussions.</p>
+          </div>
+          </a>
+        </div>
+
+        <div class="col s12 m4 l3">
+          <a href="{{ url_for('tools') }}" class="black-text">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
+            <h5 class="center">Featured Ideas</h5>
+            <p class="light center-align">Ideas that turned into tools by team members. Share your solutions that's being implemented in your project.</p>
+          </div>
+            </a>
+        </div>
+
+		<div class="col s12 m4 l3">
+          <a href="{{ url_for('campaigns') }}" class="black-text">
+            <div class="icon-block">
+              <h2 class="center brown-text"><i class="material-icons">touch_app</i></h2>
+              <h5 class="center">Campaigns</h5>
+              <p class="light center-align">Data Gathering and Analysis. Connect with management, Poll, Survey and Announcements </p>
+            </div>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+{% endblock %}

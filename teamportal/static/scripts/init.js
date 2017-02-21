@@ -1,17 +1,8 @@
-(function($){
-  $(function(){
-
-    $('.button-collapse').sideNav();
-    $('.parallax').parallax();
-  }); // end of document ready
-})(jQuery); // end of jQuery name space
-
-$(document).ready(function(){
-    $('.collapse').sideNav();
-    $('.parallax').parallax();
-  });
 
 $(document).ready(function() {
+    $('.collapse').sideNav();
+    $('.parallax').parallax();
+    $('.collapsible').collapsible();
     window.setTimeout("fadeMyDiv();", 3000); //call fade in 3 seconds
   });
 
@@ -55,3 +46,30 @@ $(function() {
       return false;
     });
   });
+
+$(function(){
+    $("#autocomplete").autocomplete({
+      source: function( request, response ) {
+        $.getJSON($SCRIPT_ROOT + "/autcomplete", {
+            search: request.term
+        }, function( data ) {
+            response( $.map( data.results, function( item ) {
+                return {
+                    label: item.label,
+                    value: item.value
+                }
+            }));
+        });
+},
+       select: function (event, ui) {
+             $("#name").val(ui.item.label);
+             $("#value").val(ui.item.value);
+             return false;
+       },
+       focus: function(event, ui) {
+        $("#autocomplete").val(ui.item.label);
+        return false; // Prevent the widget from inserting the value.
+       }
+       //minLength: 3
+   });
+});

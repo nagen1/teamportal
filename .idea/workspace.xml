@@ -2,11 +2,66 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8d9d633-d651-46a7-a135-dee2c8658478" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/teamportal.iml" afterPath="$PROJECT_DIR$/.idea/teamportal.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runserver.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/teamportal/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/teamportal/views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web.config" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web.debug.config" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app.py" afterPath="$PROJECT_DIR$/teamportal/app.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/css/style.css" afterPath="$PROJECT_DIR$/teamportal/static/css/style.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/roboto/Roboto-Bold.eot" afterPath="$PROJECT_DIR$/teamportal/static/fonts/roboto/Roboto-Bold.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/roboto/Roboto-Bold.ttf" afterPath="$PROJECT_DIR$/teamportal/static/fonts/roboto/Roboto-Bold.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/roboto/Roboto-Bold.woff" afterPath="$PROJECT_DIR$/teamportal/static/fonts/roboto/Roboto-Bold.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/roboto/Roboto-Bold.woff2" afterPath="$PROJECT_DIR$/teamportal/static/fonts/roboto/Roboto-Bold.woff2" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/roboto/Roboto-Light.eot" afterPath="$PROJECT_DIR$/teamportal/static/fonts/roboto/Roboto-Light.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/roboto/Roboto-Light.ttf" afterPath="$PROJECT_DIR$/teamportal/static/fonts/roboto/Roboto-Light.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/roboto/Roboto-Light.woff" afterPath="$PROJECT_DIR$/teamportal/static/fonts/roboto/Roboto-Light.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/roboto/Roboto-Light.woff2" afterPath="$PROJECT_DIR$/teamportal/static/fonts/roboto/Roboto-Light.woff2" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/roboto/Roboto-Medium.eot" afterPath="$PROJECT_DIR$/teamportal/static/fonts/roboto/Roboto-Medium.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/roboto/Roboto-Medium.ttf" afterPath="$PROJECT_DIR$/teamportal/static/fonts/roboto/Roboto-Medium.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/roboto/Roboto-Medium.woff" afterPath="$PROJECT_DIR$/teamportal/static/fonts/roboto/Roboto-Medium.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/roboto/Roboto-Medium.woff2" afterPath="$PROJECT_DIR$/teamportal/static/fonts/roboto/Roboto-Medium.woff2" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/roboto/Roboto-Regular.eot" afterPath="$PROJECT_DIR$/teamportal/static/fonts/roboto/Roboto-Regular.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/roboto/Roboto-Regular.ttf" afterPath="$PROJECT_DIR$/teamportal/static/fonts/roboto/Roboto-Regular.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/roboto/Roboto-Regular.woff" afterPath="$PROJECT_DIR$/teamportal/static/fonts/roboto/Roboto-Regular.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/roboto/Roboto-Regular.woff2" afterPath="$PROJECT_DIR$/teamportal/static/fonts/roboto/Roboto-Regular.woff2" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/roboto/Roboto-Thin.eot" afterPath="$PROJECT_DIR$/teamportal/static/fonts/roboto/Roboto-Thin.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/roboto/Roboto-Thin.ttf" afterPath="$PROJECT_DIR$/teamportal/static/fonts/roboto/Roboto-Thin.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/roboto/Roboto-Thin.woff" afterPath="$PROJECT_DIR$/teamportal/static/fonts/roboto/Roboto-Thin.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/roboto/Roboto-Thin.woff2" afterPath="$PROJECT_DIR$/teamportal/static/fonts/roboto/Roboto-Thin.woff2" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/images/bg-01.jpg" afterPath="$PROJECT_DIR$/teamportal/static/images/bg-01.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/images/wf-logo.gif" afterPath="$PROJECT_DIR$/teamportal/static/images/wf-logo.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/images/wf-logo.png" afterPath="$PROJECT_DIR$/teamportal/static/images/wf-logo.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/scripts/init.js" afterPath="$PROJECT_DIR$/teamportal/static/scripts/init.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/uploads/40Sample_DOC_file.docx" afterPath="$PROJECT_DIR$/teamportal/static/uploads/40Sample_DOC_file.docx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/uploads/41Sample_PDF.pdf" afterPath="$PROJECT_DIR$/teamportal/static/uploads/41Sample_PDF.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/uploads/44textfile.txt" afterPath="$PROJECT_DIR$/teamportal/static/uploads/44textfile.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/uploads/IMG_0626.jpg" afterPath="$PROJECT_DIR$/teamportal/static/uploads/IMG_0626.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/auth/login.html" afterPath="$PROJECT_DIR$/teamportal/templates/auth/login.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/auth/logout.html" afterPath="$PROJECT_DIR$/teamportal/templates/auth/logout.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/auth/register.html" afterPath="$PROJECT_DIR$/teamportal/templates/auth/register.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/campaigns/attendCampaign.html" afterPath="$PROJECT_DIR$/teamportal/templates/campaigns/attendCampaign.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/campaigns/campaignDetails.html" afterPath="$PROJECT_DIR$/teamportal/templates/campaigns/campaignDetails.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/campaigns/index.html" afterPath="$PROJECT_DIR$/teamportal/templates/campaigns/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/campaigns/newCampaign.html" afterPath="$PROJECT_DIR$/teamportal/templates/campaigns/newCampaign.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/collaborate/index.html" afterPath="$PROJECT_DIR$/teamportal/templates/collaborate/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/collaborate/newthread.html" afterPath="$PROJECT_DIR$/teamportal/templates/collaborate/newthread.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/collaborate/threadDetails.html" afterPath="$PROJECT_DIR$/teamportal/templates/collaborate/threadDetails.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/ideas/deleteIdea.html" afterPath="$PROJECT_DIR$/teamportal/templates/ideas/deleteIdea.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/ideas/editIdea.html" afterPath="$PROJECT_DIR$/teamportal/templates/ideas/editIdea.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/ideas/ideaDetails.html" afterPath="$PROJECT_DIR$/teamportal/templates/ideas/ideaDetails.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/ideas/index.html" afterPath="$PROJECT_DIR$/teamportal/templates/ideas/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/ideas/myComments.html" afterPath="$PROJECT_DIR$/teamportal/templates/ideas/myComments.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/ideas/myIdeas.html" afterPath="$PROJECT_DIR$/teamportal/templates/ideas/myIdeas.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/ideas/myWatch.html" afterPath="$PROJECT_DIR$/teamportal/templates/ideas/myWatch.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/ideas/newIdea.html" afterPath="$PROJECT_DIR$/teamportal/templates/ideas/newIdea.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/ideas/search.html" afterPath="$PROJECT_DIR$/teamportal/templates/ideas/search.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/teamportal/templates/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/layout.html" afterPath="$PROJECT_DIR$/teamportal/templates/layout.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/tools/index.html" afterPath="$PROJECT_DIR$/teamportal/templates/tools/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/testdata.py" afterPath="$PROJECT_DIR$/teamportal/testdata.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/scripts/init.js" afterPath="$PROJECT_DIR$/static/scripts/init.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database.py" afterPath="$PROJECT_DIR$/database.py" />
     </list>
     <ignored path="teamportal.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,28 +81,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.py">
+      <file leaf-file-name="init.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/teamportal/static/scripts/init.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3585">
-              <caret line="248" column="26" selection-start-line="248" selection-start-column="26" selection-end-line="248" selection-end-column="26" />
+            <state relative-caret-position="165">
+              <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="init.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/scripts/init.js">
+      <file leaf-file-name="app.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/teamportal/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
-              <folding />
+            <state relative-caret-position="270">
+              <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
+              <folding>
+                <element signature="e#0#104#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="threadDetails.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/collaborate/threadDetails.html">
+        <entry file="file://$PROJECT_DIR$/teamportal/templates/collaborate/threadDetails.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
               <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
@@ -61,7 +118,7 @@
         </entry>
       </file>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/ideas/index.html">
+        <entry file="file://$PROJECT_DIR$/teamportal/templates/ideas/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
               <caret line="8" column="22" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="17" />
@@ -71,7 +128,7 @@
         </entry>
       </file>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/index.html">
+        <entry file="file://$PROJECT_DIR$/teamportal/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="450">
               <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
@@ -80,8 +137,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="layout.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/layout.html">
+      <file leaf-file-name="layout.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/teamportal/templates/layout.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
               <caret line="9" column="85" selection-start-line="9" selection-start-column="85" selection-end-line="9" selection-end-column="85" />
@@ -93,7 +150,7 @@
         </entry>
       </file>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/collaborate/index.html">
+        <entry file="file://$PROJECT_DIR$/teamportal/templates/collaborate/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
               <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
@@ -107,9 +164,14 @@
       <file leaf-file-name="database.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
-              <folding />
+            <state relative-caret-position="315">
+              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+              <folding>
+                <marker date="1487637566000" expanded="true" signature="262:425" ph="..." />
+                <marker date="1487637566000" expanded="true" signature="444:1028" ph="..." />
+                <marker date="1487637566000" expanded="true" signature="806:1028" ph="'''...'''" />
+                <marker date="1487637566000" expanded="true" signature="1048:1690" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -151,6 +213,8 @@
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/static/scripts/init.js" />
+        <option value="$PROJECT_DIR$/web.config" />
+        <option value="$PROJECT_DIR$/web.debug.config" />
       </list>
     </option>
   </component>
@@ -169,7 +233,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="Scope" currentSubView="Project Files" proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -187,6 +251,20 @@
         <subPane subId="Project Files">
           <PATH>
             <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="teamportal">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="teamportal">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -227,6 +305,10 @@
     <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/teamportal" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/templates/collaborate" />
       <recent name="$PROJECT_DIR$/templates/campaigns" />
@@ -279,7 +361,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="teamportal" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testdata.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/teamportal/testdata.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -449,9 +531,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19097957" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19097957" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28674698" sideWeight="0.5081043" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.4918957" order="7" side_tool="false" content_ui="tabs" />
@@ -486,39 +568,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app.py</url>
-          <line>245</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app.py</url>
-          <line>120</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app.py</url>
-          <line>300</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app.py</url>
-          <line>408</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/testdata.py</url>
+          <url>file://$PROJECT_DIR$/teamportal/testdata.py</url>
           <line>82</line>
           <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app.py</url>
-          <line>438</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app.py</url>
-          <line>474</line>
-          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
       <option name="time" value="12" />
@@ -526,39 +578,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="56" selection-start-line="33" selection-start-column="56" selection-end-line="33" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/layout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
-          <folding>
-            <marker date="1487448804000" expanded="true" signature="7751:7757" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/campaigns/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="49" column="44" selection-start-line="49" selection-start-column="44" selection-end-line="49" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6255">
-          <caret line="417" column="87" selection-start-line="417" selection-start-column="8" selection-end-line="417" selection-end-column="87" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testdata.py">
+    <entry file="file://$PROJECT_DIR$/teamportal/testdata.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -568,21 +588,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/campaigns/newCampaign.html">
+    <entry file="file://$PROJECT_DIR$/teamportal/templates/campaigns/newCampaign.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/campaigns/campaignDetails.html">
+    <entry file="file://$PROJECT_DIR$/teamportal/templates/campaigns/campaignDetails.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="36" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/campaigns/index.html">
+    <entry file="file://$PROJECT_DIR$/teamportal/templates/campaigns/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="25" column="57" selection-start-line="25" selection-start-column="57" selection-end-line="25" selection-end-column="57" />
@@ -597,21 +617,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/campaigns/newCampaign.html">
+    <entry file="file://$PROJECT_DIR$/teamportal/templates/campaigns/newCampaign.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/campaigns/campaignDetails.html">
+    <entry file="file://$PROJECT_DIR$/teamportal/templates/campaigns/campaignDetails.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/campaigns/index.html">
+    <entry file="file://$PROJECT_DIR$/teamportal/templates/campaigns/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="25" column="60" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="60" />
@@ -641,7 +661,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/ideas/myComments.html">
+    <entry file="file://$PROJECT_DIR$/teamportal/templates/ideas/myComments.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
@@ -663,14 +683,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/ideas/myComments.html">
+    <entry file="file://$PROJECT_DIR$/teamportal/templates/ideas/myComments.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="50" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/ideas/myWatch.html">
+    <entry file="file://$PROJECT_DIR$/teamportal/templates/ideas/myWatch.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="36" column="45" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
@@ -684,14 +704,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/campaigns/attendCampaign.html">
+    <entry file="file://$PROJECT_DIR$/teamportal/templates/campaigns/attendCampaign.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testdata.py">
+    <entry file="file://$PROJECT_DIR$/teamportal/testdata.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="202">
           <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
@@ -701,21 +721,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/campaigns/newCampaign.html">
+    <entry file="file://$PROJECT_DIR$/teamportal/templates/campaigns/newCampaign.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/campaigns/index.html">
+    <entry file="file://$PROJECT_DIR$/teamportal/templates/campaigns/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="735">
           <caret line="49" column="44" selection-start-line="49" selection-start-column="44" selection-end-line="49" selection-end-column="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/campaigns/campaignDetails.html">
+    <entry file="file://$PROJECT_DIR$/teamportal/templates/campaigns/campaignDetails.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="21" column="69" selection-start-line="21" selection-start-column="69" selection-end-line="21" selection-end-column="69" />
@@ -740,56 +760,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../Flask/lib/python3.5/site-packages/flask/app.py" />
     <entry file="file://$PROJECT_DIR$/static/css/materialize.css" />
-    <entry file="file://$PROJECT_DIR$/templates/auth/login.html">
+    <entry file="file://$PROJECT_DIR$/teamportal/templates/auth/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/auth/register.html">
+    <entry file="file://$PROJECT_DIR$/teamportal/templates/auth/register.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="114" selection-start-line="5" selection-start-column="114" selection-end-line="5" selection-end-column="114" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/ideas/ideaDetails.html">
+    <entry file="file://$PROJECT_DIR$/teamportal/templates/ideas/ideaDetails.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/auth/logout.html">
+    <entry file="file://$PROJECT_DIR$/teamportal/templates/auth/logout.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/ideas/editIdea.html">
+    <entry file="file://$PROJECT_DIR$/teamportal/templates/ideas/editIdea.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/collaborate/newthread.html">
+    <entry file="file://$PROJECT_DIR$/teamportal/templates/collaborate/newthread.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="57" selection-start-line="17" selection-start-column="57" selection-end-line="17" selection-end-column="57" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/style.css">
+    <entry file="file://$PROJECT_DIR$/teamportal/static/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="341">
           <caret line="112" column="4" selection-start-line="112" selection-start-column="4" selection-end-line="112" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/collaborate/index.html">
+    <entry file="file://$PROJECT_DIR$/teamportal/templates/collaborate/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
@@ -799,7 +819,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/ideas/index.html">
+    <entry file="file://$PROJECT_DIR$/teamportal/templates/ideas/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="22" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="17" />
@@ -809,16 +829,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/database.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
-          <folding />
+        <state relative-caret-position="315">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding>
+            <marker date="1487637566000" expanded="true" signature="262:425" ph="..." />
+            <marker date="1487637566000" expanded="true" signature="444:1028" ph="..." />
+            <marker date="1487637566000" expanded="true" signature="806:1028" ph="'''...'''" />
+            <marker date="1487637566000" expanded="true" signature="1048:1690" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/layout_BACKUP_12020.html" />
     <entry file="file://$PROJECT_DIR$/templates/layout_BASE_12020.html" />
     <entry file="file://$PROJECT_DIR$/templates/layout_REMOTE_12020.html" />
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
+    <entry file="file://$PROJECT_DIR$/teamportal/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
@@ -834,7 +859,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/collaborate/threadDetails.html">
+    <entry file="file://$PROJECT_DIR$/teamportal/templates/collaborate/threadDetails.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
@@ -846,14 +871,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/scripts/init.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -862,12 +879,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/layout.html">
+    <entry file="file://$PROJECT_DIR$/teamportal/templates/layout.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="85" selection-start-line="9" selection-start-column="85" selection-end-line="9" selection-end-column="85" />
           <folding>
             <marker date="1487448804000" expanded="true" signature="7751:7757" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/scripts/init.js.orig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/teamportal/static/scripts/init.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web.debug.config">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web.config">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/teamportal/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#104#0" expanded="true" />
           </folding>
         </state>
       </provider>

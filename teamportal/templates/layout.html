@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+    <title>Ideas</title>
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="//code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" rel="Stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" media="screen,projection" />
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="{{ url_for('static', filename='scripts/init.js') }}"></script>
+</head>
+<body>
+    <header>
+        <ul id="slide-out" class="side-nav">
+            <li><div class="userView" style="height: 132px;">
+                    <div class="background">
+                        <img src="{{ url_for('static', filename='images/office.jpg') }}">
+                    </div>
+                    <h4><strong class="white-text" style="padding: 15px;">teamportal</strong></h4>
+                </div>
+            </li>
+            <li class="bold">
+                <div class="no-padding collapsible-header">
+                    <a href="{{ url_for('ideas') }}"><i class="material-icons">lightbulb_outline</i>!deas</a>
+                </div>
+            </li>
+            <li class="bold">
+                <div class="no-padding collapsible-header">
+                    <a href="{{ url_for('collaborate') }}"><i class="material-icons">group</i>Collaborate</a>
+                </div>
+            </li>
+            <li class="bold">
+                <div class="no-padding collapsible-header">
+                    <a href="{{ url_for('tools') }}"><i class="material-icons">settings</i>Featured Ideas</a>
+                </div>
+            </li>
+            <li>
+                <ul class="collapsible" data-collapsible="accordion">
+                    <li>
+                        <div class="no-padding collapsible-header"><a><i class="material-icons">touch_app</i>Management</a></div>
+                        <div class="collapsible-body" style="display: block;">
+                            <ul style="padding-left: 16px;">
+                                <li><a href="{{ url_for('campaigns') }}"><i class="material-icons">assignment</i>Campaigns</a></li>
+                                <li><a href="#"><i class="material-icons">insert_comment</i>Survey</a></li>
+                                <li><a href="#"><i class="material-icons">poll</i>Poll</a></li>
+                                <li><a href="#"><i class="material-icons">link</i>Link#</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li class="bold">
+                <div class="no-padding collapsible-header">
+                    <a href="#"><i class="material-icons">layers</i>Volunteer Opportunities</a>
+                </div>
+            </li>
+            <li class="bold">
+                <div class="no-padding collapsible-header">
+                    <a href="#"><i class="material-icons">gps_fixed</i>Trainings</a>
+                </div>
+            </li>
+            <li class="bold">
+                <div class="no-padding collapsible-header">
+                    <a href="#"><i class="material-icons">event_note</i>Events</a>
+                </div>
+            </li>
+            <li class="bold">
+                <div class="no-padding collapsible-header">
+                    <a href="#"><i class="material-icons">filter_none</i>News</a>
+                </div>
+            </li>
+            <li class="bold">
+                <div class="no-padding collapsible-header">
+                    <a href="#"><i class="material-icons">star</i>Recognitions</a>
+                </div>
+            </li>
+        </ul>
+
+        <div class="navbar-fixed">
+            <nav class="white" role="navigation">
+                <div class="nav-wrapper">
+                    <a href="{{ url_for('index') }}" class="left hide-on-med-and-down"><img src="{{ url_for('static', filename='images/wf-logo.png') }}" style="height:45px; width:50px; padding-left: 5px; padding-top:2px; padding-bottom: 2px;"></a>
+                    <a href="#" data-activates="slide-out" class="collapse left hide-on-med-and-down black-text" style="padding-left: 10px;"><i class="material-icons">menu</i></a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="{{ url_for('ideas') }}">!deas</a></li>
+                        <li><a href="{{ url_for('collaborate') }}">Collaborate</a></li>
+                        <li><a href="{{ url_for('tools') }}">Featured Ideas</a></li>
+                        <li><a href="{{ url_for('campaigns') }}">Campaigns</a></li>
+                        <li><a class="dropdown-button" href="#!" data-activates="dropdown1"><i class="material-icons" style="font-size: 30px; color: Green;">account_circle</i></a></li>
+                        <li><a href="{{ url_for('logout') }}">Logout</a></li>
+                    </ul>
+                    <form action="/search" method="POST" class="brand-logo center black-text" style="width: 300px;">
+                        <div class="input-field">
+							<input id="autocomplete" type="search" name="autocomplete" style="background-color: aliceblue;">
+							<label for="autocomplete"><i class="material-icons grey-text">search</i></label>
+						</div>
+                    </form>
+
+                </div>
+            </nav>
+            <ul id="dropdown1" class="dropdown-content" style="min-width:150px; top: 60px;">
+                <li><a href="{{ url_for('myIdeas') }}">My Ideas</a></li>
+                <li><a href="{{ url_for('myWatch') }}">Watchlist</a></li>
+                <li><a href="{{ url_for('myComments') }}">My Comments</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <!--   Grid Container section   -->
+        <div class="row">
+            {% block content %}
+
+            {% endblock %}
+        </div>
+    </main>
+
+    <footer class="page-footer teal">
+        <div class="container">
+            <div class="row">
+
+                <div class="col l3 s12">
+                    <ul>
+                        <li><a class="white-text" href="{{ url_for('ideas') }}">!deas</a></li>
+                        <li><a class="white-text" href="{{ url_for('collaborate') }}">Collaborate</a></li>
+                        <li><a class="white-text" href="{{ url_for('tools') }}">Featured Ideas</a></li>
+                    </ul>
+                </div>
+                <div class="col l3 s12">
+                    <ul>
+                        <li><a class="white-text" href="{{ url_for('campaigns') }}">Campaigns</a></li>
+                        <li><a class="white-text" href="#!">Suggestions</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                Made for <a class="brown-text text-lighten-3" href="#">Enterprise</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!--  Scripts-->
+    <!--script src="{{ url_for('static', filename='scripts/materialize.min.js') }}"></script-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    <script type=text/javascript>
+        $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+    </script>
+
+</body>
+</html>

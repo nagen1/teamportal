@@ -6,6 +6,16 @@
  * Made By MaterializeCSS.com
  */
 
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
 nav ul a,
 nav .brand-logo {
   color: #444;
@@ -13,10 +23,6 @@ nav .brand-logo {
 
 p {
   line-height: 2rem;
-}
-
-.button-collapse {
-  color: #26a69a;
 }
 
 .parallax-container {
@@ -113,3 +119,17 @@ nav .brand-logo {
         height: 45px;
     }
 }
+
+nav .nav-wrapper form, nav .nav-wrapper form .input-field{
+height: 100%;
+}
+
+.ui-autocomplete {
+            cursor:pointer;
+            height:120px;
+            overflow-y:scroll;
+ }
+
+ .sidenav-overlay {
+ opacity: 0;
+ }
