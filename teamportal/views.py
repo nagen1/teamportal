@@ -60,7 +60,7 @@ def index():
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
-        if 'wellsfargo' in request.form['email']:
+        if 'gmail' in request.form['email']:
             newUser = User()
             newUser.name = request.form['name']
             newUser.email = request.form['email']
