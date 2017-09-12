@@ -27,3 +27,5 @@
  - Discussion form to improve any ideas, form teams to work/trive to implement an Idea
 ### Data Analytics
 - Bottom up apporach to gather data where Lead user can by simply share a Poll URL link with team memebers
+
+The Project structure and build to deploy in MS Azure services.
