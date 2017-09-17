@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8d9d633-d651-46a7-a135-dee2c8658478" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/teamportal/database.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/teamportal/templates/layout.html" afterPath="$PROJECT_DIR$/teamportal/templates/layout.html" />
     </list>
     <ignored path="teamportal.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,7 +35,7 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/teamportal/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="73">
+            <state relative-caret-position="1140">
               <caret line="87" column="55" selection-start-line="87" selection-start-column="55" selection-end-line="87" selection-end-column="55" />
               <folding>
                 <element signature="e#53#157#0" expanded="true" />
@@ -112,10 +111,10 @@
       <file leaf-file-name="layout.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/teamportal/templates/layout.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-510">
-              <caret line="46" column="31" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
+            <state relative-caret-position="297">
+              <caret line="138" column="22" selection-start-line="138" selection-start-column="22" selection-end-line="138" selection-end-column="22" />
               <folding>
-                <marker date="1487448804000" expanded="true" signature="7751:7757" ph="..." />
+                <marker date="1505620395000" expanded="true" signature="7831:7837" ph="..." />
               </folding>
             </state>
           </provider>
@@ -172,6 +171,7 @@
         <option value="$PROJECT_DIR$/static/scripts/init.js" />
         <option value="$PROJECT_DIR$/web.config" />
         <option value="$PROJECT_DIR$/web.debug.config" />
+        <option value="$PROJECT_DIR$/teamportal/templates/layout.html" />
       </list>
     </option>
   </component>
@@ -292,6 +292,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -865,7 +866,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/teamportal/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
+        <state relative-caret-position="1140">
           <caret line="87" column="55" selection-start-line="87" selection-start-column="55" selection-end-line="87" selection-end-column="55" />
           <folding>
             <element signature="e#53#157#0" expanded="true" />
@@ -875,10 +876,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/teamportal/templates/layout.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-510">
-          <caret line="46" column="31" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
+        <state relative-caret-position="297">
+          <caret line="138" column="22" selection-start-line="138" selection-start-column="22" selection-end-line="138" selection-end-column="22" />
           <folding>
-            <marker date="1487448804000" expanded="true" signature="7751:7757" ph="..." />
+            <marker date="1505620395000" expanded="true" signature="7831:7837" ph="..." />
           </folding>
         </state>
       </provider>
