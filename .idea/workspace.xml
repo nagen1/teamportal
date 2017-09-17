@@ -2,66 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8d9d633-d651-46a7-a135-dee2c8658478" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runserver.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/teamportal/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/teamportal/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web.config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web.debug.config" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app.py" afterPath="$PROJECT_DIR$/teamportal/app.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/css/style.css" afterPath="$PROJECT_DIR$/teamportal/static/css/style.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/roboto/Roboto-Bold.eot" afterPath="$PROJECT_DIR$/teamportal/static/fonts/roboto/Roboto-Bold.eot" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/roboto/Roboto-Bold.ttf" afterPath="$PROJECT_DIR$/teamportal/static/fonts/roboto/Roboto-Bold.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/roboto/Roboto-Bold.woff" afterPath="$PROJECT_DIR$/teamportal/static/fonts/roboto/Roboto-Bold.woff" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/roboto/Roboto-Bold.woff2" afterPath="$PROJECT_DIR$/teamportal/static/fonts/roboto/Roboto-Bold.woff2" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/roboto/Roboto-Light.eot" afterPath="$PROJECT_DIR$/teamportal/static/fonts/roboto/Roboto-Light.eot" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/roboto/Roboto-Light.ttf" afterPath="$PROJECT_DIR$/teamportal/static/fonts/roboto/Roboto-Light.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/roboto/Roboto-Light.woff" afterPath="$PROJECT_DIR$/teamportal/static/fonts/roboto/Roboto-Light.woff" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/roboto/Roboto-Light.woff2" afterPath="$PROJECT_DIR$/teamportal/static/fonts/roboto/Roboto-Light.woff2" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/roboto/Roboto-Medium.eot" afterPath="$PROJECT_DIR$/teamportal/static/fonts/roboto/Roboto-Medium.eot" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/roboto/Roboto-Medium.ttf" afterPath="$PROJECT_DIR$/teamportal/static/fonts/roboto/Roboto-Medium.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/roboto/Roboto-Medium.woff" afterPath="$PROJECT_DIR$/teamportal/static/fonts/roboto/Roboto-Medium.woff" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/roboto/Roboto-Medium.woff2" afterPath="$PROJECT_DIR$/teamportal/static/fonts/roboto/Roboto-Medium.woff2" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/roboto/Roboto-Regular.eot" afterPath="$PROJECT_DIR$/teamportal/static/fonts/roboto/Roboto-Regular.eot" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/roboto/Roboto-Regular.ttf" afterPath="$PROJECT_DIR$/teamportal/static/fonts/roboto/Roboto-Regular.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/roboto/Roboto-Regular.woff" afterPath="$PROJECT_DIR$/teamportal/static/fonts/roboto/Roboto-Regular.woff" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/roboto/Roboto-Regular.woff2" afterPath="$PROJECT_DIR$/teamportal/static/fonts/roboto/Roboto-Regular.woff2" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/roboto/Roboto-Thin.eot" afterPath="$PROJECT_DIR$/teamportal/static/fonts/roboto/Roboto-Thin.eot" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/roboto/Roboto-Thin.ttf" afterPath="$PROJECT_DIR$/teamportal/static/fonts/roboto/Roboto-Thin.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/roboto/Roboto-Thin.woff" afterPath="$PROJECT_DIR$/teamportal/static/fonts/roboto/Roboto-Thin.woff" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/roboto/Roboto-Thin.woff2" afterPath="$PROJECT_DIR$/teamportal/static/fonts/roboto/Roboto-Thin.woff2" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/images/bg-01.jpg" afterPath="$PROJECT_DIR$/teamportal/static/images/bg-01.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/images/wf-logo.gif" afterPath="$PROJECT_DIR$/teamportal/static/images/wf-logo.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/images/wf-logo.png" afterPath="$PROJECT_DIR$/teamportal/static/images/wf-logo.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/scripts/init.js" afterPath="$PROJECT_DIR$/teamportal/static/scripts/init.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/uploads/40Sample_DOC_file.docx" afterPath="$PROJECT_DIR$/teamportal/static/uploads/40Sample_DOC_file.docx" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/uploads/41Sample_PDF.pdf" afterPath="$PROJECT_DIR$/teamportal/static/uploads/41Sample_PDF.pdf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/uploads/44textfile.txt" afterPath="$PROJECT_DIR$/teamportal/static/uploads/44textfile.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/uploads/IMG_0626.jpg" afterPath="$PROJECT_DIR$/teamportal/static/uploads/IMG_0626.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/auth/login.html" afterPath="$PROJECT_DIR$/teamportal/templates/auth/login.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/auth/logout.html" afterPath="$PROJECT_DIR$/teamportal/templates/auth/logout.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/auth/register.html" afterPath="$PROJECT_DIR$/teamportal/templates/auth/register.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/campaigns/attendCampaign.html" afterPath="$PROJECT_DIR$/teamportal/templates/campaigns/attendCampaign.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/campaigns/campaignDetails.html" afterPath="$PROJECT_DIR$/teamportal/templates/campaigns/campaignDetails.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/campaigns/index.html" afterPath="$PROJECT_DIR$/teamportal/templates/campaigns/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/campaigns/newCampaign.html" afterPath="$PROJECT_DIR$/teamportal/templates/campaigns/newCampaign.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/collaborate/index.html" afterPath="$PROJECT_DIR$/teamportal/templates/collaborate/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/collaborate/newthread.html" afterPath="$PROJECT_DIR$/teamportal/templates/collaborate/newthread.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/collaborate/threadDetails.html" afterPath="$PROJECT_DIR$/teamportal/templates/collaborate/threadDetails.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/ideas/deleteIdea.html" afterPath="$PROJECT_DIR$/teamportal/templates/ideas/deleteIdea.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/ideas/editIdea.html" afterPath="$PROJECT_DIR$/teamportal/templates/ideas/editIdea.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/ideas/ideaDetails.html" afterPath="$PROJECT_DIR$/teamportal/templates/ideas/ideaDetails.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/ideas/index.html" afterPath="$PROJECT_DIR$/teamportal/templates/ideas/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/ideas/myComments.html" afterPath="$PROJECT_DIR$/teamportal/templates/ideas/myComments.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/ideas/myIdeas.html" afterPath="$PROJECT_DIR$/teamportal/templates/ideas/myIdeas.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/ideas/myWatch.html" afterPath="$PROJECT_DIR$/teamportal/templates/ideas/myWatch.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/ideas/newIdea.html" afterPath="$PROJECT_DIR$/teamportal/templates/ideas/newIdea.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/ideas/search.html" afterPath="$PROJECT_DIR$/teamportal/templates/ideas/search.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/teamportal/templates/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/layout.html" afterPath="$PROJECT_DIR$/teamportal/templates/layout.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/tools/index.html" afterPath="$PROJECT_DIR$/teamportal/templates/tools/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/testdata.py" afterPath="$PROJECT_DIR$/teamportal/testdata.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/teamportal/database.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database.py" afterPath="$PROJECT_DIR$/database.py" />
     </list>
     <ignored path="teamportal.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -84,21 +26,51 @@
       <file leaf-file-name="init.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/teamportal/static/scripts/init.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+            <state relative-caret-position="225">
+              <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/teamportal/app.py">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/teamportal/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
+            <state relative-caret-position="73">
+              <caret line="87" column="55" selection-start-line="87" selection-start-column="55" selection-end-line="87" selection-end-column="55" />
               <folding>
-                <element signature="e#0#104#0" expanded="true" />
+                <element signature="e#53#157#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="database.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/teamportal/database.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="12" column="44" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="runserver.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/runserver.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/teamportal/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -137,25 +109,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="layout.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="layout.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/teamportal/templates/layout.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="85" selection-start-line="9" selection-start-column="85" selection-end-line="9" selection-end-column="85" />
+            <state relative-caret-position="-510">
+              <caret line="46" column="31" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
               <folding>
                 <marker date="1487448804000" expanded="true" signature="7751:7757" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/teamportal/templates/collaborate/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-              <folding>
-                <element signature="n#style#0;n#h5#0;n#strong#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -167,9 +127,6 @@
             <state relative-caret-position="315">
               <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding>
-                <marker date="1487637566000" expanded="true" signature="262:425" ph="..." />
-                <marker date="1487637566000" expanded="true" signature="444:1028" ph="..." />
-                <marker date="1487637566000" expanded="true" signature="806:1028" ph="'''...'''" />
                 <marker date="1487637566000" expanded="true" signature="1048:1690" ph="..." />
               </folding>
             </state>
@@ -219,8 +176,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="900" />
+    <option name="height" value="824" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -247,6 +205,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope">
         <subPane subId="Project Files">
           <PATH>
@@ -293,28 +252,59 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="teamportal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="teamportal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="teamportal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="teamportal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="teamportal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="teamportal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/teamportal" />
+      <recent name="$PROJECT_DIR$/templates/collaborate" />
+      <recent name="$PROJECT_DIR$/templates/campaigns" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/teamportal" />
       <recent name="$PROJECT_DIR$" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/templates/collaborate" />
-      <recent name="$PROJECT_DIR$/templates/campaigns" />
-    </key>
   </component>
-  <component name="RunManager" selected="Python.app">
+  <component name="RunManager" selected="Python.runserver">
     <configuration default="false" name="app" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -362,6 +352,23 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="teamportal" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/teamportal/testdata.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="runserver" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="teamportal" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/runserver.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -500,16 +507,18 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <list size="3">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Python.app" />
       <item index="1" class="java.lang.String" itemvalue="Python.database" />
       <item index="2" class="java.lang.String" itemvalue="Python.testdata" />
+      <item index="3" class="java.lang.String" itemvalue="Python.runserver" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Python.app" />
-        <item index="1" class="java.lang.String" itemvalue="Python.database" />
-        <item index="2" class="java.lang.String" itemvalue="Python.testdata" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Python.runserver" />
+        <item index="1" class="java.lang.String" itemvalue="Python.app" />
+        <item index="2" class="java.lang.String" itemvalue="Python.database" />
+        <item index="3" class="java.lang.String" itemvalue="Python.testdata" />
       </list>
     </recent_temporary>
   </component>
@@ -530,23 +539,23 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="824" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19097957" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19027483" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28674698" sideWeight="0.5081043" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2363388" sideWeight="0.5081043" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.4918957" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28674698" sideWeight="0.4918957" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28647926" sideWeight="0.48907682" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28532237" sideWeight="0.4947146" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38795182" sideWeight="0.4918957" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -578,45 +587,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/teamportal/testdata.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/teamportal/templates/campaigns/newCampaign.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/teamportal/templates/campaigns/campaignDetails.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="36" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/teamportal/templates/campaigns/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="57" selection-start-line="25" selection-start-column="57" selection-end-line="25" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5325">
-          <caret line="355" column="0" selection-start-line="355" selection-start-column="0" selection-end-line="355" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app.py" />
     <entry file="file://$PROJECT_DIR$/teamportal/templates/campaigns/newCampaign.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -645,22 +616,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4095">
-          <caret line="273" column="18" selection-start-line="273" selection-start-column="18" selection-end-line="273" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3555">
-          <caret line="237" column="66" selection-start-line="237" selection-start-column="66" selection-end-line="237" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app.py" />
+    <entry file="file://$PROJECT_DIR$/app.py" />
     <entry file="file://$PROJECT_DIR$/teamportal/templates/ideas/myComments.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -668,14 +625,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app.py" />
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -813,9 +763,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-          <folding>
-            <element signature="n#style#0;n#h5#0;n#strong#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -832,9 +779,6 @@
         <state relative-caret-position="315">
           <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding>
-            <marker date="1487637566000" expanded="true" signature="262:425" ph="..." />
-            <marker date="1487637566000" expanded="true" signature="444:1028" ph="..." />
-            <marker date="1487637566000" expanded="true" signature="806:1028" ph="'''...'''" />
             <marker date="1487637566000" expanded="true" signature="1048:1690" ph="..." />
           </folding>
         </state>
@@ -851,14 +795,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3585">
-          <caret line="248" column="26" selection-start-line="248" selection-start-column="26" selection-end-line="248" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app.py" />
     <entry file="file://$PROJECT_DIR$/teamportal/templates/collaborate/threadDetails.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -875,41 +812,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/teamportal/templates/layout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="85" selection-start-line="9" selection-start-column="85" selection-end-line="9" selection-end-column="85" />
-          <folding>
-            <marker date="1487448804000" expanded="true" signature="7751:7757" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/scripts/init.js.orig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/teamportal/static/scripts/init.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/static/scripts/init.js.orig" />
     <entry file="file://$PROJECT_DIR$/web.debug.config">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -917,16 +827,58 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/teamportal/app.py" />
+    <entry file="file://$PROJECT_DIR$/teamportal/static/scripts/init.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/teamportal/app.py">
+    <entry file="file://$PROJECT_DIR$/runserver.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
+        <state relative-caret-position="75">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/teamportal/database.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="12" column="44" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/teamportal/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/teamportal/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="73">
+          <caret line="87" column="55" selection-start-line="87" selection-start-column="55" selection-end-line="87" selection-end-column="55" />
           <folding>
-            <element signature="e#0#104#0" expanded="true" />
+            <element signature="e#53#157#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/teamportal/templates/layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-510">
+          <caret line="46" column="31" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
+          <folding>
+            <marker date="1487448804000" expanded="true" signature="7751:7757" ph="..." />
           </folding>
         </state>
       </provider>
