@@ -1,5 +1,9 @@
 """
+
 Routes and views for the flask application.
+Teamportal is mainly meant for the enterprise level solution for Ideation, discussion forums like (stackoverflow),
+team motivation activities, sharing best practices between team members and etc..
+
 """
 
 from flask import Flask, render_template, request, session, url_for, flash, redirect, send_file, jsonify
